@@ -1,4 +1,5 @@
 
+/* Css for the main pages */
 #headerDiv{
     width: 100%;
     border: 1px solid black;
@@ -6,7 +7,7 @@
 }
 
 #logo{
-    border: 1px solid black;
+ 
     display: inline-block;
     width: 25%;
     font-style:oblique;
@@ -23,12 +24,23 @@
 #currentUserInfo{
     border: 1px solid black;
     display: inline-block;
+    text-align: end;
     width: 24%;
+    
 }
 
 #registerAndProfile{
     border: 1px solid black;
     width: 200px;
     margin-left: 70%
+}
+
+#bodyPage{
+    background-color: beige;
+    height: 800px;
+}
+footer{
+    background-color:dimgray;
+    height: 100px;
 }
 

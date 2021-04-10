@@ -30,7 +30,7 @@
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
                 <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -59,10 +59,10 @@
                             <a class="nav-link active" aria-current="page" href="final_project.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Listing</a>
+                            <a class="nav-link" href="listing.php">Listing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Promotions</a>
+                            <a class="nav-link" href="promotions.php">Promotions</a>
                         </li>
                     </ul>                        
                     <div id="registerAndProfile">                                               
@@ -73,6 +73,18 @@
             </div>
         </nav>
     </div>
+
+    <!-- Body of page Starts here -->
+    <div id="bodyPage">
+
+    this is trial heigh
+
+    </div>
+
+    <!-- end of Page -->
+    <footer>
+        this is the end
+    </footer>  
 
 </body>   
 </html>
