@@ -65,9 +65,9 @@
                             <a class="nav-link" href="#">Promotions</a>
                         </li>
                     </ul>                        
-                    <div id="registerationDiv">                        
-                        <a href="#"> Register</a> or <a href="#"> Sign in</a>                        
-                    </div>                                             
+                    <div id="registerAndProfile">                                               
+                        <a href="#"> Register</a> or <a href="#"> Sign in</a> <a href="#"> Profile</a>                         
+                    </div>                                         
                     
                 </div>
             </div>
