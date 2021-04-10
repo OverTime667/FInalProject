@@ -1,6 +1,32 @@
 
 #headerDiv{
-   
+    width: 100%;
     border: 1px solid black;
-  
+    
 }
+
+#logo{
+    border: 1px solid black;
+    display: inline-block;
+    width: 25%;
+    font-style:oblique;
+    text-align: center;
+
+}
+
+#searchpart{
+    border: 1px solid black;
+    display: inline-block;
+    width: 50%;
+}
+
+#currentUserInfo{
+    border: 1px solid black;
+    display: inline-block;
+    width: 24%;
+}
+
+#registerationDiv{
+    border: 1px solid black;
+}
+
