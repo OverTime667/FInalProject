@@ -22,7 +22,8 @@
     <div id="headerDiv">
         <!-- logo part of headerDiv -->
         <div id="logo">
-            <h2><b>Logo</b></h2>
+            <h2 ><b>FIND YOUR CAR</b></h2>
+           
         </div>
 
         <!-- search part of the headerdiv -->
@@ -36,6 +37,7 @@
             </div>
             </nav>
         </div>
+        
 
         <!-- user information part of headerDiv -->
         <div id="currentUserInfo"> 
@@ -66,9 +68,14 @@
                         </li>
                     </ul>                        
                     <div id="registerAndProfile">                                               
-                        <a href="#"> Register</a> or <a href="#"> Sign in</a> <a href="#"> Profile</a>                         
+                        <a href="register.php"> Register</a> or <a href="signin.php"> Sign in</a>                       
                     </div>                                         
-                    
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -83,7 +90,24 @@
 
     <!-- end of Page -->
     <footer>
-        this is the end
+    <div id="footerContainer">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid" >
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link " href="aboutus.php">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.php">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="question.php">Have a Question ?</a>
+                        </li>
+                    </ul>   
+            </div>    
+            
+        </nav>      
+    </div>
     </footer>  
 
 </body>   

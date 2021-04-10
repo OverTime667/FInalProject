@@ -7,22 +7,22 @@
 }
 
 #logo{
- 
     display: inline-block;
+
     width: 25%;
     font-style:oblique;
     text-align: center;
-
 }
 
+
 #searchpart{
-    border: 1px solid black;
+  
     display: inline-block;
     width: 50%;
 }
 
 #currentUserInfo{
-    border: 1px solid black;
+
     display: inline-block;
     text-align: end;
     width: 24%;
@@ -30,7 +30,7 @@
 }
 
 #registerAndProfile{
-    border: 1px solid black;
+
     width: 200px;
     margin-left: 70%
 }
@@ -38,9 +38,39 @@
 #bodyPage{
     background-color: beige;
     height: 800px;
+    
 }
 footer{
     background-color:dimgray;
-    height: 100px;
+ 
+}
+#footerContainer{
+    border: 1px solid white;
+   
+}
+
+/* div page start from */
+
+#Registerdiv{
+
+    display: inline-block;
+    border: 1px solid black;
+    width: 500px;
+    padding: 20px;
+    background-color: white;
+    margin:20px;
+
+}
+
+#alreadyRegDiv{
+    
+    display: inline-block;
+    border: 1px solid black;
+    width: 350px;
+    
+    padding: 20px;
+    background-color: white;
+   text-align: center;
+   margin-top: -25px;
 }
 
