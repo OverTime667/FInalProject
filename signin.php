@@ -43,8 +43,9 @@
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" class="form-control" >
                     </div>
-                 
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <a href="home.php">
+                        <button type="button" class="btn btn-primary" >Sign in </button>
+                    </a>
                 </form>
             </div>
 

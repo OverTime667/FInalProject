@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,20 +12,70 @@
 </head>
 <body>
     <?php
-
     include_once("header.php");
-
     ?>
 
 
     <!-- Body of page Starts here -->
     <div id="bodyPage">
-    Home
+
+
+        <div id="homeCards">
+            <br>
+            <br>
+            <!-- card for listing -->
+            <div class="card bg-dark text-black">
+                <img src="./img/carlogoimg.jpg" class="card-img" height=300 alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Welcome to the best online commerce </h5>
+                    <h5 class="card-title">If you are ready to find a car click here!! </h5>
+                    <a href="listing.php">
+                        <button type="button" class="btn btn-primary" >Go to our list </button>
+                    </a>               
+                </div>
+            </div>
+
+            <br/>
+            <br/>
+            <!-- card for promotions -->
+            <div class="card bg-dark text-black">
+                <img src="./img/carlogoimg.jpg" class="card-img" height=300 alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Welcome to the best online commerce </h5>
+                    <h5 class="card-title">If you are ready to find a car click here!! </h5>
+                    <a href="promotions.php">
+                        <button type="button" class="btn btn-primary" >See our promotions</button>
+                    </a>               
+                </div>
+            </div>
+
+
+            <br/>
+            <br/>
+            
+            <!-- card for promotions -->
+            <div class="card bg-dark text-black">
+                <img src="./img/carlogoimg.jpg" class="card-img" height=300 alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">If you haven't register yet. Click here!</h5>
+                    <a href="register.php">
+                        <button type="button" class="btn btn-primary" >Register here</button>
+                    </a>               
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
     </div>
 
 
-    <?php
 
+
+
+
+
+
+    <?php
         include_once("footer.php");
     ?>  
 

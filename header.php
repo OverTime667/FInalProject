@@ -66,11 +66,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="promotions.php">Promotions</a>
                         </li>
-                    </ul>                        
-                    <div id="registerAndProfile">                                               
+                    </ul>
+                                     
+                    <div id="registerAndProfile">                                                                  
                         <a href="register.php"> Register</a> or <a href="signin.php"> Sign in</a>                       
                     </div>                                         
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <a href="items.php">
+                        <button type="button" class="btn btn-primary" >Create a post</button>
+                    </a>
                     <ul class="navbar-nav">
                         <li class="nav-item ">
                             <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
