@@ -14,23 +14,23 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<?php
+    <?php
 
-include_once("header.php");
+    include_once("header.php");
 
-?>
+    ?>
 
 
     <!-- Body of page Starts here -->
     <div id="bodyPage">
-
     Home
-
     </div>
- <?php
 
-include_once("footer.php");
-?>  
+    
+    <?php
+
+        include_once("footer.php");
+    ?>  
 
 </body>   
 </html>
