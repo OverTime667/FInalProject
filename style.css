@@ -75,3 +75,19 @@ footer{
    margin-top: -25px;
 }
 
+
+
+#profileBody{
+    background-color: beige;
+    margin-left: 10%;
+    width: 80%;
+}
+
+
+.center {
+    margin: auto;
+    width: 40%;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: white;
+}

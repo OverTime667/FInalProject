@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Edit Profile</title>
     <!--implement bootstrapp -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
@@ -37,10 +37,14 @@
                     <label for="exampleInputPhonenumber" class="form-label">Phone number</label>
                     <input type="text" class="form-control" >
                 </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword" class="form-label">New Password</label>
+                    <input type="password" class="form-control" >
+                </div>
+
                 
-                <a href="editProfile.php">
-                    <button type="button" class="btn btn-primary" >Edit </button>
-                </a>
+                
+                <button type="submit" class="btn btn-primary">Save</button>
             </form>
         </div>
     </div>
