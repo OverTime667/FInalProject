@@ -1,6 +1,7 @@
 <?php
 
 
+
 ?>
 
 
@@ -38,10 +39,23 @@
             </nav>
         </div>
         
+        <?php   
+        
+        
+        ?>
 
         <!-- user information part of headerDiv -->
         <div id="currentUserInfo"> 
-            user
+        <?php   
+          
+
+            if(!isset($_COOKIE["user"])){
+                echo "User ";
+            }else{
+                echo "Welcome " . $_COOKIE["user"];
+            }
+        
+        ?>
         </div>
 
     </div>
@@ -68,7 +82,7 @@
                         </li>
                     </ul>
                                      
-                    <div id="registerAndProfile">                                                                  
+                    <div id="registerAndProfile" >                                                                  
                         <a href="register.php"> Register</a> or <a href="signin.php"> Sign in</a>                       
                     </div>                                         
                     <a href="items.php">
