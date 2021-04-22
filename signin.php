@@ -34,8 +34,7 @@ if(isset($_POST['signin']))
 
     <!-- Body of page Starts here -->
     <div id="bodyPage">
-        
-
+            <!-- TEST -->
         <div id= "containeseverything" >
 
         <!--ask the user to register info -->
