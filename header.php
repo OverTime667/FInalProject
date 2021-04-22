@@ -1,8 +1,13 @@
 <?php
 
 
-
+    // Insert Record in customer table
+    if(isset($_POST['logout']))
+    {
+        setcookie("user", "");
+    }
 ?>
+
 
 
 
@@ -81,9 +86,19 @@
                             <a class="nav-link" href="promotions.php">Promotions</a>
                         </li>
                     </ul>
-                                     
-                    <div id="registerAndProfile" >                                                                  
+                            <!-- use php to disable and renable the singin and login for user  -->       
+                    <div id="registerAndProfile" > 
+
+                        <?php if(!isset($_COOKIE["user"])) { ?>                                            
                         <a href="register.php"> Register</a> or <a href="signin.php"> Sign in</a>                       
+                    <?php }else{?>
+                        <form action="header.php" method="POST">
+                        <input type="submit" name="logout"   value="logout">
+                        </form>
+                    <?php   
+                    
+                
+                    } ?>
                     </div>                                         
                     <a href="items.php">
                         <button type="button" class="btn btn-primary" >Create a post</button>
