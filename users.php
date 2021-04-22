@@ -67,7 +67,7 @@
                 $cookie_name = "user";
                 $cookie_value = $email;
                 setcookie($cookie_name,$cookie_value);
-                echo "cookie save";
+                header("Refresh:0");
 
             }else{
                 echo "Account not found.";

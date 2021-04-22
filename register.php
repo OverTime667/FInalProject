@@ -60,7 +60,9 @@
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" placeholder="enter a secret password" require="">
                     </div>
+                    <a href="signin.php">
                     <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                    </a>
                    
             </div>
 

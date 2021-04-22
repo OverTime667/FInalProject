@@ -5,6 +5,7 @@
     if(isset($_POST['logout']))
     {
         setcookie("user", "");
+        header("Refresh:0");
     }
 ?>
 
@@ -92,7 +93,7 @@
                         <?php if(!isset($_COOKIE["user"])) { ?>                                            
                         <a href="register.php"> Register</a> or <a href="signin.php"> Sign in</a>                       
                     <?php }else{?>
-                        <form action="header.php" method="POST">
+                        <form action="home.php" method="POST">
                         <input type="submit" name="logout"   value="logout">
                         </form>
                     <?php   
