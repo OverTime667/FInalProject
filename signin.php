@@ -1,6 +1,14 @@
 <?php
+    include 'users.php';
 
+// Create an object of type customer
+$usersObject = new Users();
 
+// Insert Record in customer table
+if(isset($_POST['signin']))
+{
+    $usersObject->confirm($_POST);
+}
 ?>
 
 
@@ -32,20 +40,21 @@
 
         <!--ask the user to register info -->
             <div id="Registerdiv"  >          
-                <form>
+                <form actions="signin.php" method="POST" >
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control"  aria-describedby="emailHelp">
+                        <input type="email" class="form-control"  name="email" placeholder="enter your email account" require="">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                    
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" >
+                        <input type="password" class="form-control" name="password" placeholder="Enter your password" require="" >
                     </div>
-                    <a href="home.php">
+                    <!-- <a href="home.php">
                         <button type="button" class="btn btn-primary" >Sign in </button>
-                    </a>
+                    </a> -->
+                    <input type="submit" name="signin" class="btn btn-primary" value="Submit">
                 </form>
             </div>
 

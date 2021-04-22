@@ -1,5 +1,15 @@
 <?php
 
+    //include the database file
+    include 'users.php';
+
+        // Create an object of type customer
+    $usersObject = new Users();
+    // Insert Record in customer table
+    if(isset($_POST['submit']))
+    {
+        $usersObject->insertUser($_POST);
+    }
 
 ?>
 
@@ -32,27 +42,26 @@
 
         <!--ask the user to register info -->
             <div id="Registerdiv"  >          
-                <form>
+                <form action="register.php" method="POST">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control"  aria-describedby="emailHelp">
+                        <input type="email" class="form-control" name="email"  placeholder="Enter Email" require="">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Username</label>
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" name="username" placeholder="Enter an username" require=""> 
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPhonenumber" class="form-label">Phone number</label>
-                        <input type="text"  class="form-control" >
+                        <input type="text"  class="form-control" name="phone" placeholder="Enter a valid phone number" require="">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" >
+                        <input type="password" class="form-control" name="password" placeholder="enter a secret password" require="">
                     </div>
-                 
-                    <button type="submit" class="btn btn-primary">Register</button>
-                </form>
+                    <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                   
             </div>
 
             <div id="alreadyRegDiv"> 
