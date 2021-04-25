@@ -33,17 +33,19 @@
             $milage = $this-> con-> real_escape_string($_POST['milage']);
             $seats = $this-> con-> real_escape_string($_POST['seats']);
             $availability = $this-> con-> real_escape_string($_POST['availability']);
-            $dateofmodel = $this-> con-> real_escape_string($_POST['other']);;
+           
+           
             $dateofpost = date('d-m-y h:i:s');
             $fees =  5 ;
             $datesold =  $this-> con-> real_escape_string("");
             $image = $this-> con-> real_escape_string($_POST['image']);
             $other = $this-> con-> real_escape_string($_POST['other']);
-            
+            $datemodel= $this-> con-> real_escape_string($_POST['trial']);
+           
             
 
             $query = " INSERT INTO posts(owner, brand, price, location, milage, seats, availability, date_of_model, date_of_post, fees, dateSold, image, other)
-            VALUES ('$owner','$brand','$price','$location','$milage','$seats','$availability', '$dateofmodel', '$dateofpost', '$fees', '$datesold', '$image', '$other')"; 
+            VALUES ('$owner','$brand','$price','$location','$milage','$seats','$availability', '$datemodel', '$dateofpost', '$fees', '$datesold', '$image', '$other')"; 
            
             $sql = $this->con->query($query);
             if($sql == true){
