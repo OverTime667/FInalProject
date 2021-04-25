@@ -1,6 +1,6 @@
 <?php
 
-include("post.php");
+    
     // Insert Record in customer table
     if(isset($_POST['logout']))
     {
