@@ -92,15 +92,10 @@
 
                         <?php if(!isset($_COOKIE["user"])) { ?>                                            
                         <a href="register.php"> Register</a> or <a href="signin.php"> Sign in</a>                       
-                    <?php }else{?>
+                    <?php }else{ ?>
                         <form action="home.php" method="POST">
                         <input type="submit" name="logout"   value="logout">
-                        </form>
-                    <?php   
-                    
-                
-                    } ?>
-                    </div>                                         
+                        </div>                                         
                     <a href="items.php">
                         <button type="button" class="btn btn-primary" >Create a post</button>
                     </a>
@@ -109,6 +104,14 @@
                             <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
                         </li>
                     </ul>
+                        </form>
+                    <?php   
+                    
+                
+                    } ?>
+                   
+                    
+
                 </div>
             </div>
         </nav>

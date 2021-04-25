@@ -8,7 +8,15 @@ $usersObject = new Users();
 if(isset($_POST['signin']))
 {
     $usersObject->confirm($_POST);
+
+    
 }
+ //This will redirect to the home page if user cookies are register
+ if(isset($_COOKIE["user"])){
+
+     header("Location: home.php");
+ }
+
 ?>
 
 

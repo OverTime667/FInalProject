@@ -1,4 +1,21 @@
+<?php
+include 'users.php';
 
+// Create an object of type customer
+$usersObject = new Users();
+
+// Edit customer record
+if(isset($_COOKIE["user"])){
+  $editemail =  $_COOKIE["user"];
+  $user = $usersObject->displayUserbyEmail($editemail);
+}
+
+  // Update Record in customer table
+  if(isset($_POST['update'])) {
+    $usersObject->updateRecord($_POST);
+  } 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,28 +40,28 @@
 
     <!--ask the user to register info -->
         <div id="profileDiv" class="center" >          
-            <form>
+            <form action="editProfile.php" method="POST">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control"  aria-describedby="emailHelp">
+                    <input readonly type="email" class="form-control" name="uemail"  value="<?php echo $user['email']; ?>" require="">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputUsername" class="form-label">Username</label>
-                    <input type="text" class="form-control" >
+                    <input type="text" class="form-control" name="uusername"  value="<?php echo $user['username']; ?>" require="">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPhonenumber" class="form-label">Phone number</label>
-                    <input type="text" class="form-control" >
+                    <label for="exampleInputPhonenumber" class="form-label" >Phone number</label>
+                    <input type="text" class="form-control" name="uphone" value="<?php echo $user['phone']; ?>" require="" >
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword" class="form-label">New Password</label>
-                    <input type="password" class="form-control" >
+                    <input type="text" class="form-control" name="upassword" value="<?php echo $user['password']; ?>" require="" >
                 </div>
 
                 
                 
-                <button type="submit" class="btn btn-primary">Save</button>
+                <input type="submit" name="update" class="btn btn-primary"  value="Update">
             </form>
         </div>
     </div>

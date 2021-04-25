@@ -1,3 +1,19 @@
+<?php
+
+include 'users.php';
+
+// Create an object of type customer
+$usersObject = new Users();
+
+// Edit customer record
+if(isset($_COOKIE["user"])){
+  $editemail =  $_COOKIE["user"];
+  $user = $usersObject->displayUserbyEmail($editemail);
+}
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +32,10 @@
     <?php
 
         include_once("header.php");
+
+    
+
+
     ?>
 
     <!-- Body of page Starts here -->
@@ -23,19 +43,19 @@
 
     <!--ask the user to register info -->
         <div id="profileDiv" class="center" >          
-            <form>
+            <form action="profile.php" method="POST">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control"  aria-describedby="emailHelp">
+                    <input readonly type="email" class="form-control" name="uemail"  aria-describedby="emailHelp" value="<?php echo $user['email']; ?>" require="" >
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputUsername" class="form-label">Username</label>
-                    <input type="text" class="form-control" >
+                    <input readonly type="text" class="form-control" name="uusername" value="<?php echo $user['username']; ?>" require="" >
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPhonenumber" class="form-label">Phone number</label>
-                    <input type="text" class="form-control" >
+                    <input readonly type="text" class="form-control" name="uphone" value="<?php echo $user['phone']; ?>" require="" >
                 </div>
                 
                 <a href="editProfile.php">

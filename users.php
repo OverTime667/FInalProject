@@ -68,9 +68,50 @@
                 $cookie_value = $email;
                 setcookie($cookie_name,$cookie_value);
                 header("Refresh:0");
+             
 
             }else{
                 echo "Account not found.";
+            }
+
+        }
+
+
+        public function displayUserbyEmail($email){
+
+      
+             $query = "SELECT * FROM users WHERE email = '$email'";
+            $result = $this->con->query($query);
+            if($result->num_rows > 0){
+                $data = $result->fetch_assoc();           
+                return $data;
+            }
+            else{
+                echo "Record not found";
+            }
+ 
+
+        }
+
+        //Update the values in users db 
+        public function updateRecord($email){
+
+            $email = $this-> con-> real_escape_string($_POST['uemail']);
+            $username = $this-> con-> real_escape_string($_POST['uusername']);
+            $phone = $this-> con-> real_escape_string($_POST['uphone']);
+            $password = $this-> con-> real_escape_string($_POST['upassword']);
+
+            // Edit customer record
+            if(isset($_COOKIE["user"])){ 
+                
+                $query = "UPDATE users SET username = '$username', phone = '$phone', password= '$password' WHERE email = '$email'";
+                $sql = $this->con->query($query);
+                if($sql==true)
+                {
+                    header("Location:profile.php");
+                }else{
+                    echo "Failed to update, try again!";
+                }
             }
 
         }
