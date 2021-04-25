@@ -11,7 +11,7 @@ CREATE TABLE posts (
   milage varchar(16) NOT NULL,
   seats INT(1) NOT NULL,
   availability varchar(10) NOT NULL,
-  date_of_model varchar(50) NOT NULL,
+  date_of_model DateTime NOT NULL,
     date_of_post timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   fees varchar(16) NOT NULL,
   dateSold DateTime,
