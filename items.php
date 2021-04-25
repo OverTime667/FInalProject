@@ -1,6 +1,14 @@
 <?php
-
-
+    
+    include'post.php';
+      // Create an object of type customer
+      $postObject = new Posts();
+      // Insert Record in customer table
+      if(isset($_POST['Register']))
+      {
+          $postObject->insertPost($_POST);
+      }
+  
 ?>
 
 
@@ -62,7 +70,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputDateOfModel" class="form-label">Date of Model</label>
-                        <input type="text" class="form-control"  name="dateModel"  placeholder="Enter the model's date" require="" >
+                        <input type="text" class="form-control"  name="date_of_model"  placeholder="Enter the model's date" require="" >
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputImage" class="form-label">Image</label>
@@ -70,7 +78,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputDescription" class="form-label">Description</label>
-                        <input type="text" class="form-control"  name="description"  placeholder="Enter a small description of the car" require="" >
+                        <input type="text" class="form-control"  name="other"  placeholder="Enter a small description of the car" require="" >
                     </div>
                     <br>
                     <input type="submit" name="Register" class="btn btn-primary" value="Register">
