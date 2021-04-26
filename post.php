@@ -42,8 +42,6 @@
             $other = $this-> con-> real_escape_string($_POST['other']);
             $datemodel= $this-> con-> real_escape_string($_POST['trial']);
            
-            
-
             $query = " INSERT INTO posts(owner, brand, price, location, milage, seats, availability, date_of_model, date_of_post, fees, dateSold, image, other)
             VALUES ('$owner','$brand','$price','$location','$milage','$seats','$availability', '$datemodel', '$dateofpost', '$fees', '$datesold', '$image', '$other')"; 
            
@@ -54,8 +52,22 @@
             else{
                 echo "Registration failed, please try again!";
             }
+        }
 
+        public function displayData(){
 
+            $query = "SELECT * FROM posts";
+        $result = $this->con->query($query);
+        if($result->num_rows > 0){
+            $data = array();
+            while($row = $result->fetch_assoc()){
+                $data[] = $row;
+            }
+            return $data;
+        }
+        else{
+            echo "No found records";
+        }
 
         }
     }

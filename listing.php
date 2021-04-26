@@ -1,5 +1,9 @@
 <?php
 
+    include 'post.php';
+
+    $postObject = new Posts();
+
 ?>
 
 
@@ -26,8 +30,61 @@ include_once("header.php");
     <!-- Body of page Starts here -->
     <div id="bodyPage">
 
-    Listing page
 
+        <h2>View Records
+            <a href="add.php" class="btn btn-primary" style="float:right;">Add New Record</a>
+        </h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+             <th>image </th>
+                <th>id </th>
+                <th>Owner</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Location</th>
+                <th>milage</th>
+                <th>Seats</th>
+                <th>Availability</th>
+                <th>Date of Model</th>
+                <th>other</th>
+                <th>date of post</th>
+                <th>date sold</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php 
+                $posts = $postObject->displayData(); 
+                foreach ($posts as $post) {
+                ?>
+                <tr>
+                
+                <td>
+                <img src="<?php echo $post['image'] ?>" width="105" height="105"> 
+                </td>
+                <td><?php echo $post['post_id'] ?></td>
+                <td><?php echo $post['owner'] ?></td>
+                <td><?php echo $post['brand'] ?></td>
+                <td><?php echo $post['price'] ?></td>
+                <td><?php echo $post['location'] ?></td>
+                <td><?php echo $post['milage'] ?></td>
+                <td><?php echo $post['seats'] ?></td>
+                <td><?php echo $post['availability'] ?></td>
+                <td><?php echo $post['date_of_model'] ?></td>
+                <td><?php echo $post['other'] ?></td>
+                <td><?php echo $post['date_of_post']?></td>
+                <td><?php echo $post['dateSold']?></td>
+                <td>
+                    <a href="edit.php?editId=<?php echo $customer['id'] ?>" style="color:green">
+                    <i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
+                    <a href="index.php?deleteId=<?php echo $customer['id'] ?>" style="color:red" onclick="confirm('Are you sure want to delete this record')">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </td>
+                </tr>
+            <?php } ?>
+            </tbody>
+         </table>
     </div>
 <?php
 
