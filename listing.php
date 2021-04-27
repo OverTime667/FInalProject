@@ -54,6 +54,13 @@ include_once("header.php");
             </thead>
             <tbody>
                 <?php 
+                /* $perpage = 10;
+                if(isset($_GET["page"])){
+                    $page = intval($_GET["page"]);
+                    }
+                else {
+                    $page = 1;
+                } */
                 $posts = $postObject->displayData(); 
                 foreach ($posts as $post) {
                 ?>
@@ -86,6 +93,15 @@ include_once("header.php");
             </tbody>
          </table>
     </div>
+
+    
+
+
+
+
+
+
+
 <?php
 
 include_once("footer.php");
