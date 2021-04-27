@@ -69,20 +69,8 @@
             echo "No found records";
         }
 
-        }
-
-        public function displayPaging(){
-
-            $query = "SELECT Count(*) As Total FROM posts";
-            $result = $this->con->query($query);
-
-           echo $rows = mysqli_num_rows($result);
-        }
     }
-
-
-
-
+        }
 
 
 
