@@ -1,7 +1,7 @@
 <?php
 
     include_once 'users.php';
-
+    include 'post.php';
     $userObject = new Users();
     
     // Insert Record in customer table

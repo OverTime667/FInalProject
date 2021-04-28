@@ -1,7 +1,8 @@
 <?php
 
-    include 'post.php';
-
+    
+include_once 'header.php';
+    include_once 'post.php';
     $postObject = new Posts();
 
      // Insert Record in customer table
@@ -26,7 +27,7 @@
 <body>
 
 <?php
-    include_once("header.php");
+  
     ?>
 
         <div id="bodyPage">
