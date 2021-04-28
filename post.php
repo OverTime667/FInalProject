@@ -87,6 +87,20 @@
 
 
         }
+
+
+
+        public function deleteRecord($id){
+            $query = "DELETE FROM posts WHERE post_id = '$id'";
+            $sql = $this->con->query($query);
+            if($sql==true){
+                echo "Record deleted successfully";
+            }
+            else{
+                echo "Not possible to delete, please try again";        
+            }
+        }
+
     }
 
 ?>

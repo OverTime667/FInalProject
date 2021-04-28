@@ -108,7 +108,7 @@
                                 <?php  $post = $userObject -> verifyAdmin($_COOKIE["user"]); 
                                  if( $post) {
                                     ?>                                          
-                                        <a class="nav-link"  href="home.php">list of post</a>
+                                        <a class="nav-link"  href="postlist.php">list of post</a>
                                       
                                    
                             <?php }} ?>
