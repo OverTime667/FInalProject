@@ -133,6 +133,37 @@
 
         }
 
+            //display all user data for admins
+
+            public function showAdmin(){
+
+                $query = "SELECT * FROM users";
+                $result = $this->con->query($query);
+                if($result->num_rows > 0){
+                    $data = array();
+                    while($row = $result->fetch_assoc()){
+                        $data[] = $row;
+                    }
+                    return $data;
+                }
+                else{
+                    echo "No found records";
+                }
+
+            }
+
+            public function deleteRecord($id){
+
+
+                $query = "DELETE FROM users WHERE user_id = '$id' AND status != 'admin'";
+        $sql = $this->con->query($query);
+        if($sql==true){
+            echo "Keep in mind that you cannot delete an admin";
+        }
+        else{
+            echo "Not possible to delete, please try again!";
+        }
+            }
 
     }
 

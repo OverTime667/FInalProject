@@ -96,7 +96,7 @@
                                     <?php  $post = $userObject -> verifyAdmin($_COOKIE["user"]); 
                                         if( $post) {
                                     ?>
-                                        <a class="nav-link"  href="home.php">list of Users</a>
+                                        <a class="nav-link"  href="userList.php">list of Users</a>
                                         
                             <?php }} ?>
                             </div>
