@@ -61,7 +61,7 @@ if(isset($_POST['signin']))
                     <!-- <a href="home.php">
                         <button type="button" class="btn btn-primary" >Sign in </button>
                     </a> -->
-                    <input type="submit" name="signin" class="btn btn-primary" value="Submit">
+                    <input type="submit" name="signin" class="btn btn-primary" value="Signin">
                 </form>
             </div>
 

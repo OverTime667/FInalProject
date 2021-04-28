@@ -43,6 +43,7 @@
             $sql = $this->con->query($query);
             if($sql == true){
                 echo "Data inserted!";
+                header("Location: signin.php");
             }
             else{
                 echo "Registration failed, please try again!";
