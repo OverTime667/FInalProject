@@ -20,6 +20,11 @@ include_once 'header.php';
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
+<?php
+
+
+?>
+
 
     <!-- Body of page Starts here -->
     <div id="bodyPage">

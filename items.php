@@ -1,6 +1,6 @@
 <?php
     
-    include'post.php';
+    include_once 'header.php';
       // Create an object of type customer
       $postObject = new Posts();
       // Insert Record in customer table
@@ -27,10 +27,7 @@
 </head>
 <body>
     <!--div representing the header of the page --> 
-    <?php
-
-        include_once("header.php");
-    ?>
+    
 
     <!-- Body of page Starts here -->
     <div id="bodyPage">
