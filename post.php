@@ -67,11 +67,26 @@
         }
         else{
             echo "No found records";
+            }   
+
+         }
+        
+
+        public function displayUniquePost($id){
+
+        $query = "SELECT * FROM posts WHERE post_id = '$id'";
+        $result = $this ->con->query($query);
+
+        if($result -> num_rows > 0){
+            $data = $result->fetch_assoc();           
+            return $data;
+        }
+        else{
+            echo "Record not found";
         }
 
+
+        }
     }
-        }
-
-
 
 ?>

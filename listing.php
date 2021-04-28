@@ -88,7 +88,11 @@ include_once("header.php");
                 <td><?php echo $post['milage'] ?></td>
                 <td><?php echo $post['seats'] ?></td>
                 <td><?php echo $post['availability'] ?></td>
-                <td><?php echo $post['date_of_model'] ?></td>
+                <td><?php echo $post['date_of_model'] ?>
+                <a href="ItemDetails.php?id=<?php echo $post['post_id'] ?>">
+                        <button type="button" class="btn btn-primary" >Sign in </button>
+                    </a>
+                </td>
                
  
             <?php

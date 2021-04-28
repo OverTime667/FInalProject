@@ -39,10 +39,14 @@
     background-color: beige;
     margin-left: 10%;
     width: 80%;
+    min-height: 800px;
+    
+  
     
 }
 footer{
     background-color:dimgray;
+
  
 }
 #footerContainer{
@@ -60,6 +64,8 @@ footer{
     padding: 20px;
     background-color: white;
     margin:20px;
+
+    
 
 }
 
