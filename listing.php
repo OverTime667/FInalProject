@@ -1,6 +1,6 @@
 <?php
 
-    include 'post.php';
+include_once 'header.php';
 
     $postObject = new Posts();
 
