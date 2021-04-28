@@ -1,5 +1,8 @@
 <?php
 
+    include_once 'users.php';
+
+    $userObject = new Users();
     
     // Insert Record in customer table
     if(isset($_POST['logout']))
@@ -86,6 +89,32 @@
                         <li class="nav-item">
                             <a class="nav-link" href="promotions.php">Promotions</a>
                         </li>
+                        <li>
+                            <!-- customer bar only appears for admins -->
+                            <div id="adminSection" style="  width:100px">
+                            <?php if(isset($_COOKIE["user"])) { ?>                                            
+                                    <?php  $post = $userObject -> verifyAdmin($_COOKIE["user"]); 
+                                        if( $post) {
+                                    ?>
+                                        <a class="nav-link"  href="home.php">list of Users</a>
+                                        
+                            <?php }} ?>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- Post bar only appears for admins -->
+                            <div id="adminSection" style="   width:100px ">
+                            <?php if(isset($_COOKIE["user"])) { ?>  
+                                <?php  $post = $userObject -> verifyAdmin($_COOKIE["user"]); 
+                                 if( $post) {
+                                    ?>                                          
+                                        <a class="nav-link"  href="home.php">list of post</a>
+                                      
+                                   
+                            <?php }} ?>
+                            </div>
+
+                        </li>
                     </ul>
                             <!-- use php to disable and renable the singin and login for user  -->       
                     <div id="registerAndProfile" > 
@@ -94,7 +123,7 @@
                         <a href="register.php"> Register</a> or <a href="signin.php"> Sign in</a>                       
                     <?php }else{ ?>
                         <form action="home.php" method="POST">
-                        <input type="submit" name="logout"   value="logout">
+                        <input type="submit" name="logout"   value="logout" >
                         </div>                                         
                     <a href="items.php">
                         <button type="button" class="btn btn-primary" >Create a post</button>

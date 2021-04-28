@@ -48,7 +48,7 @@
             <div>
                 <!-- car picture to the left --> 
                 <div style="display: inline-block;  border: 1px solid black; width:50%;" > 
-                <img src="<?php echo $post['image'] ?>" width="500" height="250" style="float:left;" >
+                <img src="<?php echo $post['image'] ?>" width="650" height="400" style="float:left;" >
                 </div>   
 
                 <!-- left section in car to the rigth -->

@@ -1,5 +1,5 @@
 <?php
-    include 'users.php';
+    include_once 'users.php';
 
 // Create an object of type customer
 $usersObject = new Users();
