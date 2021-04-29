@@ -1,15 +1,34 @@
 <?php   
-
+ 
 include_once 'header.php';
-
+ 
     $userObject = new Users();
-
+ 
       // Delete record from table
   if(isset($_GET['deleteId']) && !empty($_GET['deleteId'])) {
     $deleteId = $_GET['deleteId'];
     $userObject->deleteRecord($deleteId);
 }
 
+    if(isset($_POST['status']))
+    {
+      $status = $_POST['status'];
+      $id = $_GET['editId'];
+     // echo $id;
+      switch($status){
+        case 'admin':
+         
+        
+          $userObject -> updateUser($id,$status);
+          break;
+          case 'customer':
+            $userObject -> updateUser($id,$status);
+            break;
+            
+       // $userObject->updateUser($_POST);
+      }
+    }
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +44,7 @@ include_once 'header.php';
 </head>
 <body>
     
-
+ 
 <h2>View Records
    
   </h2>
@@ -54,10 +73,30 @@ include_once 'header.php';
           <td><?php echo $user['phone'] ?></td>
           <td><?php echo $user['password'] ?></td>
           <td><?php echo $user['subscription'] ?></td>
-          <td><?php echo $user['status'] ?></td>
+          <td>
+          <!-- choose the status of the user-->
+            <form action="userList.php?editId=<?php echo $user['user_id'] ?>" method="POST"> 
+           
+           
+            <select name="status" id="status">
+                <option name="main">  <?php echo $user['status'] ?> </option>
+                <option  name="admin" value="admin">admin</option>
+                <option name ="customer" value="customer">customer</option>
+            </select>
+               <!--update function -->
+           <a href="userList.php?editId=<?php echo $user['user_id'] ?>" style="color:green">
+                      
+            <input type="submit" name="update" class="btn btn-primary"  style="float:right;" value="Update">
+            
+            </form>
+        
+            </td>
           <td><?php echo $user['reg_date'] ?></td>
           <td>
-            
+          <!--update function -->
+          
+
+              <!--delete button -->
             <a href="userList.php?deleteId=<?php echo $user['user_id'] ?>" style="color:red" onclick="confirm('Are you sure want to delete this record')">
               <i class="fa fa-trash" aria-hidden="true"></i>
             </a>
@@ -70,9 +109,9 @@ include_once 'header.php';
 
 
 
-
+ 
 <?php
-
+ 
 include_once("footer.php");
 ?>   
 </body>

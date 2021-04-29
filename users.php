@@ -166,6 +166,24 @@
         }
             }
 
+
+            public function updateUser($id,$status){
+
+              
+                
+               
+                    $query = "UPDATE users SET status = '$status' WHERE user_id = '$id'";
+                    $sql = $this->con->query($query);
+                    if($sql==true)
+                    {
+                        echo "User status was updated";
+                        header("Refresh:0");
+                    }else{
+                        echo "Failed to update, try again!";
+                    
+                }
+            }
+
     }
 
 

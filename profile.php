@@ -57,6 +57,7 @@ if(isset($_COOKIE["user"])){
                     <label for="exampleInputPhonenumber" class="form-label">Phone number</label>
                     <input readonly type="text" class="form-control" name="uphone" value="<?php echo $user['phone']; ?>" require="" >
                 </div>
+               
                 
                 <a href="editProfile.php">
                     <button type="button" class="btn btn-primary" >Edit </button>
