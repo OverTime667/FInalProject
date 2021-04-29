@@ -59,7 +59,24 @@ if(isset($_COOKIE["user"])){
                     <input type="text" class="form-control" name="upassword" value="<?php echo $user['password']; ?>" require="" >
                 </div>
 
+                <div class="mb-3">
+                    <label for="exampleInputPassword" class="form-label">Subscription</label>
+                            <!-- choose the status of the user-->
+                    <form action="userList.php?editId=<?php echo $user['user_id'] ?>" method="POST"> 
                 
+                
+                <select name="subscription" id="subscription">
+                    <option name="main">  <?php echo $user['subscription'] ?> </option>
+                    <option  name="Classic" value="Classic">Classic</option>
+                    <option name ="Premium" value="Premium">Premium</option>
+                    
+                </select>
+                <a href="promotions.php"> need more information? </a>
+                  
+                
+                            
+                
+                </div>
                 
                 <input type="submit" name="update" class="btn btn-primary"  value="Update">
             </form>

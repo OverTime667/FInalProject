@@ -42,17 +42,46 @@
             $other = $this-> con-> real_escape_string($_POST['other']);
             $datemodel= $this-> con-> real_escape_string($_POST['trial']);
            
+            //charge depending of the subscription
+            
+            $userObject = new Users();
+
+            if($userObject -> verifySub($owner) == true){
+               $fees = 5;
+            }else{
+            
+             $fees = 0;
+            }
+
             $query = " INSERT INTO posts(owner, brand, price, location, milage, seats, availability, date_of_model, date_of_post, fees, dateSold, image, other)
             VALUES ('$owner','$brand','$price','$location','$milage','$seats','$availability', '$datemodel', '$dateofpost', '$fees', '$datesold', '$image', '$other')"; 
            
             $sql = $this->con->query($query);
             if($sql == true){
-                echo "Data inserted!";
+               
+
+
+
+
             }
             else{
                 echo "Registration failed, please try again!";
             }
         }
+
+        // public function checksubscription($email){
+        //     $userObject = new Users();
+
+
+        //     if(var_dump( $userObject -> verifySub($owner))){
+        //         return true;
+        //     }else{
+        //         return false;
+        //     }
+            
+            
+            
+       // }
 
         public function displayData(){
 

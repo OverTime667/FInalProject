@@ -33,7 +33,7 @@
             $username = $this-> con-> real_escape_string($_POST['username']);
             $phone = $this-> con-> real_escape_string($_POST['phone']);
             $password = $this-> con-> real_escape_string($_POST['password']);
-            $subscription = "default";
+            $subscription = "classic";
             $status = "customer";
             $reg_date = date('d-m-y h:i:s');
 
@@ -118,11 +118,21 @@
             $username = $this-> con-> real_escape_string($_POST['uusername']);
             $phone = $this-> con-> real_escape_string($_POST['uphone']);
             $password = $this-> con-> real_escape_string($_POST['upassword']);
+            $subscription = $this-> con ->  real_escape_string($_POST['subscription']);
 
+            switch($subscription){
+                case 'Classic':
+                    $newsubscription = "Classic";
+                break;
+                case 'Premium':
+                    $newsubscription = "Premium";
+                    break;
+                
+            }
             // Edit customer record
             if(isset($_COOKIE["user"])){ 
                 
-                $query = "UPDATE users SET username = '$username', phone = '$phone', password= '$password' WHERE email = '$email'";
+                $query = "UPDATE users SET username = '$username', phone = '$phone', password= '$password' , subscription='$newsubscription' WHERE email = '$email'";
                 $sql = $this->con->query($query);
                 if($sql==true)
                 {
@@ -183,6 +193,40 @@
                     
                 }
             }
+
+
+          // charge 5$ to the user when they purchase a post
+          
+          public function verifySub($email){
+
+            //step 1 access all the data
+           
+            $query = "SELECT * FROM users WHERE email = '$email'";
+            $result = $this->con->query($query);
+            if($result->num_rows > 0){
+
+                //get the specific subscription a charge a price
+                while($row = mysqli_fetch_assoc($result)){
+                   
+
+                    if(  $row['subscription'] == "Classic")
+                    {
+                      
+                        return true;
+                    }else{
+                      
+                        return false;
+                    }
+                }
+                
+                
+                
+             }else{
+            
+             }
+
+
+          }
 
     }
 

@@ -60,6 +60,15 @@
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" placeholder="enter a secret password" require="">
                     </div>
+                    <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Select your subscription :</label>
+                    <select name="subscription" id="subscription">
+                   
+                    <option  name="Classic" value="Classic">Classic</option>
+                    <option name ="Premium" value="Premium">Premium</option>
+                    
+                     </select>
+                </div>
                     <a href="signin.php">
                     <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                     </a>

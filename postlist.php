@@ -36,15 +36,20 @@ include_once 'header.php';
     <table  class="table table-hover">
     <thead>
             <tr>
-                <th> </th>                             
+                <th> </th>
+                <th>Id</th>      
+                <th>Owner</th>                    
                 <th>Brand</th>
                 <th>Price</th>
                 <th>Location</th>
                 <th>Milage</th>
                 <th>Seats</th>
                 <th>Availability</th>
-                <th>Date of Model</th>           
-             
+                <th>Date Of Model</th>          
+                <th>Date Of Post</th>   
+                <th>Fees</th>   
+                <th>DateSold</th>  
+                <th>Description</th> 
             </tr>
             </thead>
         <?php
@@ -70,11 +75,12 @@ include_once 'header.php';
             ?>        
                 <tbody>
                 <td>  <img src="<?php echo $post['image'] ?>" width="150" height="150" style="float:left;" >
-                <?php echo $post['other'] ?>
+                
               
                 </td> 
                
-              
+                <td><?php echo $post['post_id'] ?></td>
+                <td><?php echo $post['owner'] ?></td>
                 <td><?php echo $post['brand'] ?></td>
                 <td><?php echo $post['price'] ."$"?></td>
                 <td><?php echo $post['location'] ?></td>
@@ -82,6 +88,10 @@ include_once 'header.php';
                 <td><?php echo $post['seats'] ?></td>
                 <td><?php echo $post['availability'] ?></td>
                 <td><?php echo $post['date_of_model'] ?>
+                <td><?php echo $post['date_of_post'] ?></td>
+                <td><?php echo $post['fees'] . "$"?></td>
+                <td><?php echo $post['dateSold'] ?></td>
+                <td><?php echo $post['other'] ?></td>
                 <!-- <a href="ItemDetails.php?id=<?php echo $post['post_id'] ?>">
                     <button type="button" class="btn btn-primary" >Sign in </button>
                 </a> -->
@@ -128,13 +138,13 @@ include_once 'header.php';
                         else
                         {
                             $j = $page - 1;
-                            echo "<span><a id='page_a_link' href='listing.php?page=$j'>< Prev</a></span>";
+                            echo "<span><a id='page_a_link' href='postlist.php?page=$j'>< Prev</a></span>";
                         }
                         for($i=1; $i <= $totalPages; $i++)
                         {
                             if($i<>$page)
                             {
-                                echo "<span><a id='page_a_link' href='listing.php?page=$i'> $i </a></span>";
+                                echo "<span><a id='page_a_link' href='postlist.php?page=$i'> $i </a></span>";
                             }
                             else
                             {
@@ -148,7 +158,7 @@ include_once 'header.php';
                         else
                         {
                             $j = $page + 1;
-                            echo "<span><a id='page_a_link' href='listing.php?page=$j'> Next </a></span>";
+                            echo "<span><a id='page_a_link' href='postlist.php?page=$j'> Next </a></span>";
                         }
                     }
                 ?></td>

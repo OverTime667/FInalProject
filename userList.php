@@ -84,7 +84,7 @@ include_once 'header.php';
                 <option name ="customer" value="customer">customer</option>
             </select>
                <!--update function -->
-           <a href="userList.php?editId=<?php echo $user['user_id'] ?>" style="color:green">
+          
                       
             <input type="submit" name="update" class="btn btn-primary"  style="float:right;" value="Update">
             
