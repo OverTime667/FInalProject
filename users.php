@@ -33,12 +33,23 @@
             $username = $this-> con-> real_escape_string($_POST['username']);
             $phone = $this-> con-> real_escape_string($_POST['phone']);
             $password = $this-> con-> real_escape_string($_POST['password']);
-            $subscription = "classic";
+         
             $status = "customer";
             $reg_date = date('d-m-y h:i:s');
 
+            $subscription = $this-> con ->  real_escape_string($_POST['subscription']);
+
+            switch($subscription){
+                case 'Classic':
+                    $newsubscription = "Classic";
+                break;
+                case 'Premium':
+                    $newsubscription = "Premium";
+                    break;
+            }
+
             $query = " INSERT INTO users(email,username,phone,password,subscription,status,reg_date)
-            VALUES ('$email','$username','$phone','$password','$subscription','$status','$reg_date')"; 
+            VALUES ('$email','$username','$phone','$password','$newsubscription','$status','$reg_date')"; 
            
             $sql = $this->con->query($query);
             if($sql == true){
