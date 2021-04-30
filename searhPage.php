@@ -4,6 +4,7 @@ include_once 'header.php';
 
     $postObject = new Posts();
 
+    $search = $_GET['search'];
 ?>
 
 
@@ -22,6 +23,75 @@ include_once 'header.php';
 <body>
 
 
+
+<!-- Body of page Starts here -->
+<div id="bodyPage">
+            <h2>View Records</h2>
+            <table  class="table table-hover">
+            <thead>
+                    <tr>
+                    <th> </th>                                   
+                        <th>Brand</th>
+                        <th>Price</th>
+                        <th>Location</th>
+                        <th>Milage</th>
+                        <th>Seats</th>
+                        <th>Availability</th>
+                        <th>Date of Model</th>
+                    </tr>
+                    </thead>
+                <?php
+                $perpage = 3;
+                $conn = new mysqli("localhost", "root", "" ,"finalproject" );
+                
+                // get the page number in url else page is equal to page 1
+                if(isset($_GET["page"])){
+                $page = intval($_GET["page"]);
+                }
+                else {
+                $page = 1;
+                }
+
+                $calc = $perpage * $page;
+                $start = $calc - $perpage;
+                $query = "SELECT * FROM posts WHERE brand LIKE '$search' Limit $start, $perpage";
+                $result = $conn->query($query);
+                $rows = mysqli_num_rows($result);
+                if($rows){
+                    $i = 0;
+                    while($post = mysqli_fetch_assoc($result)) {
+                    ?>        
+                        <tbody>
+                        <td>  <img src="<?php echo $post['image'] ?>" width="150" height="150" style="float:left;" >
+                        <?php echo $post['other'] ?>
+                    
+                        </td> 
+                    
+                    
+                        <td><?php echo $post['brand'] ?></td>
+                        <td><?php echo $post['price'] ."$"?></td>
+                        <td><?php echo $post['location'] ?></td>
+                        <td><?php echo $post['milage'] ?></td>
+                        <td><?php echo $post['seats'] ?></td>
+                        <td><?php echo $post['availability'] ?></td>
+                        <td><?php echo $post['date_of_model'] ?>
+                        <a href="ItemDetails.php?id=<?php echo $post['post_id'] ?>">
+                                <button type="button" class="btn btn-primary" >Sign in </button>
+                            </a>
+                        </td>
+                    
+        
+                    <?php
+                    }
+                }
+                ?>
+                        </tbody>
+            </table>
+
+
+
+
+    </div>
 <?php
 
 include_once("footer.php");

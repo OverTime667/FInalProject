@@ -20,12 +20,6 @@ include_once 'header.php';
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<?php
-
-
-?>
-
-
     <!-- Body of page Starts here -->
     <div id="bodyPage">
     <h2>View Records</h2>
@@ -165,67 +159,6 @@ include_once 'header.php';
 
 
 
-
-
-      <!--   <table class="table table-hover">
-            <thead>
-            <tr>
-             <th>image </th>
-                <th>id </th>
-                <th>Owner</th>
-                <th>Brand</th>
-                <th>Price</th>
-                <th>Location</th>
-                <th>milage</th>
-                <th>Seats</th>
-                <th>Availability</th>
-                <th>Date of Model</th>
-                <th>other</th>
-                <th>date of post</th>
-                <th>date sold</th>
-            </tr>
-            </thead>
-            <tbody>
-                <?php 
-                /* $perpage = 10;
-                if(isset($_GET["page"])){
-                    $page = intval($_GET["page"]);
-                    }
-                else {
-                    $page = 1;
-                } */
-                $posts = $postObject->displayData(); 
-                foreach ($posts as $post) {
-                ?>
-                <tr>
-                
-                <td>
-                <img src="<?php echo $post['image'] ?>" width="105" height="105"> 
-                </td>
-                <td><?php echo $post['post_id'] ?></td>
-                <td><?php echo $post['owner'] ?></td>
-                <td><?php echo $post['brand'] ?></td>
-                <td><?php echo $post['price'] ?></td>
-                <td><?php echo $post['location'] ?></td>
-                <td><?php echo $post['milage'] ?></td>
-                <td><?php echo $post['seats'] ?></td>
-                <td><?php echo $post['availability'] ?></td>
-                <td><?php echo $post['date_of_model'] ?></td>
-                <td><?php echo $post['other'] ?></td>
-                <td><?php echo $post['date_of_post']?></td>
-                <td><?php echo $post['dateSold']?></td>
-                <td>
-                    <a href="edit.php?editId=<?php echo $customer['id'] ?>" style="color:green">
-                    <i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
-                    <a href="index.php?deleteId=<?php echo $customer['id'] ?>" style="color:red" onclick="confirm('Are you sure want to delete this record')">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                    </a>
-                </td>
-                </tr>
-            <?php } ?>
-            </tbody>
-         </table> -->
-    </div>
 
     
 
