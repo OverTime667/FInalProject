@@ -26,16 +26,8 @@ include_once 'header.php';
     <table  class="table table-hover">
     <thead>
             <tr>
-             <th> </th>
-            
-             
-                <th>Brand</th>
-                <th>Price</th>
-                <th>Location</th>
-                <th>Milage</th>
-                <th>Seats</th>
-                <th>Availability</th>
-                <th>Date of Model</th>
+             <th> </th>                                               
+                <th></th>
                 
            
              
@@ -63,19 +55,24 @@ include_once 'header.php';
             while($post = mysqli_fetch_assoc($result)) {
             ?>        
                 <tbody>
-                <td>  <img src="<?php echo $post['image'] ?>" width="150" height="150" style="float:left;" >
-                <?php echo $post['other'] ?>
-              
-                </td> 
+                <div style=" display: inline-block;">
+                <td>  <img src="<?php echo $post['image'] ?>" width="300" height="205" style="float:left;" >
+                
+                <!-- contains the basic information to the left of the image -->
+                <div id="post_info" style=" width:800px; height:200px; display: inline-block; border: 1px solid black; margin-left: 50px;">
+                <p style="float:left;">  <?php echo "<b>" .$post['date_of_model'] . "  " . $post['brand'] . "</b>"  ?> </p>
+         
+              <p style="float:right; color:green;"><?php echo $post['price'] ."$" ?></p></br>
+              <P></P>
+               <p style=""> <?php echo $post['location'] . " | " . $post['date_of_post']  ?></p>
                
-              
-                <td><?php echo $post['brand'] ?></td>
-                <td><?php echo $post['price'] ."$"?></td>
-                <td><?php echo $post['location'] ?></td>
-                <td><?php echo $post['milage'] ?></td>
-                <td><?php echo $post['seats'] ?></td>
-                <td><?php echo $post['availability'] ?></td>
-                <td><?php echo $post['date_of_model'] ?>
+               </br>
+               <p > <?php echo $post['other'] ?> </p>
+                </br>
+                <p > <?php echo $post['milage'] . "km , " . $post['availability']  ?></p>
+                </div>
+                </td> 
+                <td>
                 <a href="ItemDetails.php?id=<?php echo $post['post_id'] ?>">
                         <button type="button" class="btn btn-primary" >Sign in </button>
                     </a>
@@ -143,30 +140,7 @@ include_once 'header.php';
         </tbody>
     </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
+                    </div>
 
 <?php
 
