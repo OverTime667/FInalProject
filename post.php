@@ -130,6 +130,23 @@
             }
         }
 
+    
+
+    public function searchItem($searchItem){
+        
+        $query = "SELECT * FROM posts WHERE brand OR price OR location LIKE '%$searchItem%'"; 
+
+        $sql = $this->con->query($query);
+        if($result->num_rows > 0){
+            $data = array();
+            while($row = $result->fetch_assoc()){
+                $data[] = $row;
+            }
+            return $data;
+        }
+    
+
     }
+}
 
 ?>

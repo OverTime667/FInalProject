@@ -1,4 +1,7 @@
 
+body{
+    background-color:silver;
+}
 /* Css for the main pages */
 #headerDiv{
     width: 100%;
@@ -12,6 +15,7 @@
     width: 25%;
     font-style:oblique;
     text-align: center;
+  
 }
 
 
@@ -19,6 +23,7 @@
   
     display: inline-block;
     width: 50%;
+   
 }
 
 #currentUserInfo{
@@ -36,11 +41,12 @@
 }
 
 #bodyPage{
-    background-color: beige;
+    background-color:whitesmoke;
     margin-left: 10%;
     width: 80%;
     min-height: 800px;
     
+  
   
     
 }

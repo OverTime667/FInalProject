@@ -25,8 +25,30 @@ include_once("header.php");
     <!-- Body of page Starts here -->
     <div id="bodyPage">
 
-    Promotions page
+    <img src="https://standinggroups.ecpr.eu/sgoc/wp-content/uploads/sites/51/2018/09/Become-a-Member.png" class="card-img-top" height="600" alt="...">
+    <div class="card mb-3">
+  <img src="https://miro.medium.com/max/4196/1*uYfVGhAYq6ss6n_wBrRvBw.jpeg" class="card-img-top" height="500" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Classic</h5>
+    <p class="card-text">The classic option will charges 5$ every time that a post is created. This is the default membership of this website</p>
+    <a href="register.php">
+         <button type="button" class="btn btn-primary" >Subscribe here </button>
+    </a>       
+  </div>
+  </div>
 
+  <div class="card mb-3">
+  <img src="https://timecommunications.biz/wp-content/uploads/Blog/2018/February_2018/Happy-Customer-Service-Rep.png" height="500" class="card-img-top" alt="...">
+    <!-- second card about Premium -->
+    <div class="card-body">
+    <h5 class="card-title">Premium</h5>
+    <p class="card-text">The classic option will charges 15$ every month. This will allow you to make as many post as you like for the price of 15$/month.</p>
+    <a href="register.php">
+         <button type="button" class="btn btn-primary" >Join us now </button>
+    </a>       
+  </div>
+
+    </div>
     </div>
 
 <?php

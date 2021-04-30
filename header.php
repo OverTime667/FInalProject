@@ -3,13 +3,23 @@
     include_once 'users.php';
     include 'post.php';
     $userObject = new Users();
-    
+    $postObject = new Posts();
     // Insert Record in customer table
     if(isset($_POST['logout']))
     {
         setcookie("user", "");
         header("Refresh:0");
     }
+
+    //search an specific car
+
+    if(isset($_POST['submit'])){
+        $searchValue = $_POST['search'];
+       
+        header("Location: searhPage.php?search=$searchValue");
+
+    }
+
 ?>
 
 
@@ -29,7 +39,7 @@
 </head>
 <body>
     <!--div representing the header of the page --> 
-    <div id="headerDiv">
+    <div id="headerDiv" style="background-color:white;">
         <!-- logo part of headerDiv -->
         <div id="logo">
             <h2 ><b>FIND YOUR CAR</b></h2>
@@ -38,14 +48,18 @@
 
         <!-- search part of the headerdiv -->
         <div id="searchpart">
+        <form action="" method="POST">
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" >
+            
+                <button class="btn btn-outline-success" name="submit" type="submit">Search</button>
+               
                 </form>
             </div>
             </nav>
+            </form>
         </div>
         
         <?php   
@@ -71,7 +85,7 @@
 
 
     <!-- navBar header page section -->
-    <div>
+    <div style="background-color:white; border:1px solid black">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 
