@@ -187,10 +187,8 @@
         }
             }
 
-
-            public function updateUser($id,$status){
-
-              
+            
+            public function updateUser($id,$status){             
                 
                
                     $query = "UPDATE users SET status = '$status' WHERE user_id = '$id'";
@@ -204,6 +202,8 @@
                     
                 }
             }
+
+           
 
 
           // charge 5$ to the user when they purchase a post

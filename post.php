@@ -83,6 +83,26 @@
             
        // }
 
+        // show total profits
+        public function totalProfits(){
+            //$profits = 0;
+            $query = "SELECT SUM(fees) AS total FROM posts";
+            $result = $this->con->query($query);
+            $row = $result->fetch_assoc();
+             return $row['total'];
+            // if($result->num_rows > 0){
+             //   //$data = array();
+               // while($row = $result->fetch_assoc()){
+                    //$data[] = $row;
+                 //   $pro
+              //  }
+                //return $profits;
+           // }
+           // else{
+             //   echo "Something wrong";
+            //} 
+        }
+
         public function displayData(){
 
             $query = "SELECT * FROM posts";

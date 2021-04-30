@@ -3,11 +3,16 @@
 include_once 'header.php';
 
     $postObject = new Posts();
+    $usersObject = new Users();
 
     if(isset($_GET['id']) && !empty($_GET['id'])) {
         $deleteId = $_GET['id'];
         $postObject->deleteRecord($deleteId);
     }
+
+    
+
+     $total = $postObject -> totalProfits();
 
 ?>
 
@@ -110,6 +115,8 @@ include_once 'header.php';
         ?>
                 </tbody>
     </table>
+
+    <h2>Total profit: <?php echo $total ?></h2>
 
 
     <!-- this section is for the paging -->

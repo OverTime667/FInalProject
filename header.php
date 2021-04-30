@@ -13,7 +13,7 @@
 
     //search an specific car
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['searchitem'])){
         $searchValue = $_POST['search'];
        
         header("Location: searhPage.php?search=$searchValue");
@@ -54,7 +54,7 @@
                 <form class="d-flex">
                 <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" >
             
-                <button class="btn btn-outline-success" name="submit" type="submit">Search</button>
+                <button class="btn btn-outline-success" name="searchitem" type="submit">Search</button>
                
                 </form>
             </div>
