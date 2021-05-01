@@ -28,10 +28,10 @@
                 <img src="https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/1-0-home/page-properties/rolls-royce-motor-cars-models-share-image.jpg" class="card-img" height=500 alt="...">
                 <div class="card-img-overlay" style="border: 1px solid black;   text-align: center; ">
                    
-                    <h2 class="card-title" style="margin-top:40px; color:blue; ">Welcome to the best online e-commerce </h2>
-                    <h2 class="card-title">If you are ready to find a car click here!! </h2>
+                    <h1 class="card-title" style="margin-top:40px; color:blue;     font-style:oblique;  "> <b>Welcome to the best online e-commerce</b> </h1>
+                    <h2 class="card-title"><b>If you are ready to find a car click here!!</b> </h2>
                     <a href="listing.php">
-                        <button type="button" class="btn btn-primary"  style="margin-top:19% " >Go to our list </button>
+                        <button type="button" class="btn btn-primary btn-lg"  style="margin-top:20%; border: 3px solid grey;" >Go to our list </button>
                     </a>
                                 
                 </div>
@@ -41,13 +41,13 @@
             <br/>
             <!-- card for promotions -->
             <div class="card bg-dark text-black">
-                <img src="https://www.napiermkt.com/uploads/1/0/9/8/10981970/published/promotion-image-sm_3.jpg?1559742827" class="card-img" height=500 alt="...">
-                <div class="card-img-overlay" style="border: 1px solid black;   text-align: center; ">
-                    <h2 class="card-title" style="margin-top:30px">Welcome to the best online commerce </h2>
-                    <h2 class="card-title">If you are ready to find a car click here!! </h2>
+                <img src="https://www.eliterent.com/uploads/homepageslider/published/2.jpg" class="card-img" height=500 alt="...">
+                <div class="card-img-overlay" style="border: 1px solid black;   text-align: center;     font-style:oblique;">
+                    <h2 class="card-title" style="margin-top:20px;   margin-left: -60%; color:#5D0707; font-style:oblique;"><b>Take a look at our Promotions!</b> </h2>
+                   
                     </br>
                     <a href="promotions.php">
-                        <button type="button" class="btn btn-primary" style="margin-top:15%"  >See our promotions</button>
+                        <button type="button" class="btn btn-primary btn-lg" style="margin-top:25%; border: 3px solid grey; "  >See our promotions</button>
                     </a>               
                 </div>
             </div>
@@ -61,10 +61,10 @@
                
                 <div class="card-img-overlay" style=" background-color: #373373;  text-align: center;">
                 </br> </br>
-                    <h1 class="card-title" style="color:white;">If you haven't register yet.</h1>
-                    <h1 style="color:white;"> Click here!</h1>                 
+                    <h1 class="card-title" style="color:white;     font-style:oblique;">If you haven't register yet.</h1>
+                    <h1 style="color:white;     font-style:oblique;"> Click here!</h1>                 
                     <a href="register.php">
-                        <button type="button" class="btn btn-primary" >Register here</button>
+                        <button type="button" class="btn btn-primary btn-lg" style="border: 3px solid grey; border-top:-5px; "  >Register here</button>
                     </a>               
                 </div>
             </div>

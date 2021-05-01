@@ -1,6 +1,6 @@
 
 body{
-    background-color:silver;
+    background-color:#525461;
 }
 /* Css for the main pages */
 #headerDiv{
@@ -15,7 +15,7 @@ body{
     width: 25%;
     font-style:oblique;
     text-align: center;
-  
+
 }
 
 
@@ -24,6 +24,7 @@ body{
     display: inline-block;
     width: 50%;
    
+  
 }
 
 #currentUserInfo{
