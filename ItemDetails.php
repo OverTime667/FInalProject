@@ -52,13 +52,13 @@ include_once 'header.php';
             <!-- middle section with car -->
             <div>
                 <!-- car picture to the left --> 
-                <div style="display: inline-block;  border: 1px solid black; width:45%; margin-left:25px;" > 
+                <div style="display: inline-block; width:45%; margin-left:25px;" > 
                 <img src="<?php echo $post['image'] ?>" width="680" height="400" style="float:left;" >
                 </div>   
 
                 <!-- left section in car to the rigth -->
 
-                <div style="display: inline-block; float:right; border: 1px solid black; width:50%">
+                <div style="display: inline-block; float:right; width:50%">
 
                
                     <!-- section to contact the Owner -->
@@ -83,10 +83,10 @@ include_once 'header.php';
             </div>
             </br>
             <!-- description of item -->
-            <div style=" border: 1px solid black;">
+            <div style=" ">
 
             <!-- left description of item -->
-                <div id="left_description"  style="   border: 1px solid black; width:50%; display:inline-block; padding:30px;">
+                <div id="left_description"  style=" width:50%; display:inline-block; padding:30px;">
                 <h2 style="background-color:#9AF094; text-align:center;">Information about the car...</h2>
                 <p  class="fw-normal fs-4" >
                 <?php echo "year: " . $post['date_of_model'] . " "?> </p>
@@ -94,20 +94,20 @@ include_once 'header.php';
                 <p  class="fw-normal fs-4" ><?php echo "date of post: " . $post['date_of_post'] . " "?> </p>
                 <p class="fw-normal fs-4"><?php echo "seats: " . $post['seats'] ?> </p>
                 <p  class="fw-normal fs-4"><?php echo "availability: " . $post['availability'] ?> </p>
-                <p class="fw-normal fs-3"> <?php echo $post['other'] ?> </p>
+                <p class="fw-normal fs-4"> <?php echo "Description: " . $post['other'] ?> </p>
                 
             </div>
 
             <!-- right description of item -->
-            <div id="right_description" style= " display:inline-block; float:right;  border: 1px solid black; width:50%;  height: 300px; padding:30px;" >
+            <div id="right_description" style= " display:inline-block; float:right; width:50%;  height: 300px; padding:30px;" >
                 <h2 style="background-color:#F8C471; text-align:center;">General Information </h2>
-                <p>- If you are the owner, Remember to remove your post after selling the specific car. Else , We will be forced to remove it, if we find the post to be no longer active</p>
-                <p>- All responsabilities about the sells are organized by the owner of the car, and we won't reply to any information concerning questions about a specific car</p>
-                <p>- The owner is fully responsible to provided all details of the car to its customers<p> 
+                <p class="fw-normal fs-5">- If you are the owner, Remember to remove your post after selling the specific car. Else , We will be forced to remove it, if we find the post to be no longer active</p>
+                <p class="fw-normal fs-5">- All responsabilities about the sells are organized by the owner of the car, and we won't reply to any information concerning questions about a specific car</p>
+                <p class="fw-normal fs-5">- The owner is fully responsible to provided all details of the car to its customers<p> 
             </div>
 
 
-                </br></br></br></br></br></br></br></br></br></br></br></br></br>
+                </br></br></br></br>
             </div>
         </div>
 
