@@ -90,17 +90,7 @@
             $result = $this->con->query($query);
             $row = $result->fetch_assoc();
              return $row['total'];
-            // if($result->num_rows > 0){
-             //   //$data = array();
-               // while($row = $result->fetch_assoc()){
-                    //$data[] = $row;
-                 //   $pro
-              //  }
-                //return $profits;
-           // }
-           // else{
-             //   echo "Something wrong";
-            //} 
+        
         }
 
         public function displayData(){
@@ -134,6 +124,32 @@
             echo "Record not found";
         }
 
+
+        }
+
+        //display the onwer Information 
+
+        public function displayContact($id){
+            $query = "SELECT * FROM posts WHERE post_id = '$id'";
+            $result = $this ->con->query($query);
+
+            //fetch the information from the customer
+            if($result -> num_rows > 0){
+                $data = $result->fetch_assoc();           
+             
+                
+                $userObject = new Users();
+                
+                $userData = $userObject ->displayUserbyEmail($data['owner']);
+                
+                return $userData;
+
+                
+
+            }
+            else{
+                echo "Record not found";
+            }
 
         }
 

@@ -56,25 +56,25 @@ include_once 'header.php';
             ?>        
                 <tbody>
                 <div style=" display: inline-block;">
-                <td>  <img src="<?php echo $post['image'] ?>" width="300" height="205" style="float:left;" >
+                <td>  <img src="<?php echo $post['image'] ?>" width="320" height="205" style="float:left;" >
                 
                 <!-- contains the basic information to the left of the image -->
-                <div id="post_info" style=" width:800px; height:200px; display: inline-block; border: 1px solid black; margin-left: 50px;">
-                <p style="float:left;">  <?php echo "<b>" .$post['date_of_model'] . "  " . $post['brand'] . "</b>"  ?> </p>
+                <div id="post_info" style=" width:800px; height:200px;  margin-left: 30%; background-color:#EEEEEF;">
+                <p  class="fs-3" style="float:left; background-color:#C8CFF4;   ">  <?php echo "<b>" .$post['date_of_model'] . "  " . $post['brand'] . "</b>"  ?> </p>
          
-              <p style="float:right; color:green;"><?php echo $post['price'] ."$" ?></p></br>
-              <P></P>
-               <p style=""> <?php echo $post['location'] . " | " . $post['date_of_post']  ?></p>
+              <p class="fs-3" style=" padding-left:88%; color:green; background-color:#C8CFF4; "><?php echo $post['price'] ."$" ?></p>
+              
+               <p  class="fs-6" style=" "> <?php echo $post['location'] . " | " . $post['date_of_post']  ?></p>
                
-               </br>
-               <p > <?php echo $post['other'] ?> </p>
-                </br>
-                <p > <?php echo $post['milage'] . "km , " . $post['availability']  ?></p>
+              
+               <p  class="fw-normal fs-4" > <?php echo $post['other'] ?> </p>
+               </br> 
+                <p  class="fw-lighter fs-6" > <?php echo $post['milage'] . "km , " . $post['availability']  ?></p>
                 </div>
                 </td> 
                 <td>
                 <a href="ItemDetails.php?id=<?php echo $post['post_id'] ?>">
-                        <button type="button" class="btn btn-primary" >Sign in </button>
+                        <button type="button" class="btn btn-primary" >See details</button>
                     </a>
                 </td>
                

@@ -10,6 +10,7 @@ include_once 'header.php';
      {
          $post_id = $_GET['id'];
         $post = $postObject->displayUniquePost($post_id);
+        $contact = $postObject->displayContact($post_id);
      }
 
 
@@ -56,9 +57,22 @@ include_once 'header.php';
 
                 <div style="display: inline-block; float:right; border: 1px solid black; width:50%">
 
-                <p> something to say </p>
+                <p class="fw-normal fs-3"> <?php echo $post['other'] ?> </p>
+                    <!-- section to contact the Owner -->
+
+                <div  style="display: inline-block; ">
+                </br></br>
+                <p class="fw-normal fs-4"> If you want to learn more about the car, Contact the onwer with this information : </p>
+           
+                <p class="fw-normal fs-5">Email : <?php echo $contact["email"] ?></p>
+                <p class="fw-normal fs-5">Phone Number : <?php echo $contact["phone"] ?> </p>
 
                 </div>
+
+
+                </div>
+
+                
             
             
             </br></br></br>
@@ -69,15 +83,16 @@ include_once 'header.php';
 
             <!-- left description of item -->
                 <div id="left_description"  style="display: inline-block; float:left;  border: 1px solid black; width:50%; ">
-                <h4>
-                <?php echo "year: " . $post['date_of_model'] . " $ "?> </h4>
+                <p  class="fw-normal fs-4" >
+                <?php echo "year: " . $post['date_of_model'] . " $ "?> </h3>
               
+                </p>
                 </div>
 
             <!-- right description of item -->
                 <div id="right_description" style= " display:inline-block; float:right;  border: 1px solid black; width:50%;  height: 300px" >
-                <h4><?php echo "seats: " . $post['seats'] ?> </h4>
-                <h4><?php echo "availability: " . $post['availability'] ?> </h4>
+                <p class="fw-normal fs-4"><?php echo "seats: " . $post['seats'] ?> </p>
+                <p  class="fw-normal fs-4"><?php echo "availability: " . $post['availability'] ?> </p>
                 </div>
 
 

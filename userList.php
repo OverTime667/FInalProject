@@ -45,6 +45,8 @@ include_once 'header.php';
 <body>
     
  
+    <!-- Body of page Starts here -->
+    <div id="bodyPage">
 <h2>View Records
    
   </h2>
@@ -108,7 +110,7 @@ include_once 'header.php';
 
 
 
-
+</div>
  
 <?php
  
