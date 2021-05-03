@@ -84,15 +84,20 @@ include_once 'header.php';
             <!-- left description of item -->
                 <div id="left_description"  style="display: inline-block; float:left;  border: 1px solid black; width:50%; ">
                 <p  class="fw-normal fs-4" >
-                <?php echo "year: " . $post['date_of_model'] . " $ "?> </h3>
-              
+                <?php echo "year: " . $post['date_of_model'] . " "?> </p>
+                <p  class="fw-normal fs-4" ><?php echo "location: " . $post['location'] . " "?> </p>
+                <p  class="fw-normal fs-4" ><?php echo "date of post: " . $post['date_of_post'] . " "?> </p>
+                <p class="fw-normal fs-4"><?php echo "seats: " . $post['seats'] ?> </p>
+                <p  class="fw-normal fs-4"><?php echo "availability: " . $post['availability'] ?> </p>
                 </p>
                 </div>
 
             <!-- right description of item -->
                 <div id="right_description" style= " display:inline-block; float:right;  border: 1px solid black; width:50%;  height: 300px" >
-                <p class="fw-normal fs-4"><?php echo "seats: " . $post['seats'] ?> </p>
-                <p  class="fw-normal fs-4"><?php echo "availability: " . $post['availability'] ?> </p>
+                <h2>Genaral Information </h2>
+                <p>- If you are the owner, Remember to remove your post after selling the specific car. Else , We will be forced to removed it, if we find the post to be no longer active</p>
+                <p>- All responsabilities about the sells are organize by the owner of the car, and we won't reply to any information concerning questions about a specific car</p>
+                <p>- The owner is fully responsible to provided all details of the car to its customers<p> 
                 </div>
 
 
