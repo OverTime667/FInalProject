@@ -47,14 +47,14 @@
         </div>
 
         <!-- search part of the headerdiv -->
-        <div id="searchpart">
+        <div id="searchpart" >
         <form action="" method="POST">
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <form class="d-flex">
-                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" >
+        <nav class=" navbar navbar-light bg-light">
+            <div class="container-fluid" style="display:inline-block;">
+                
+                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" style="width:300px" >
             
-                <button class="btn btn-outline-success" name="searchitem" type="submit">Search</button>
+                <button class="btn btn-outline-success" name="searchitem" type="submit" style="display:inline;">Search</button>
                
                 </form>
             </div>
@@ -104,13 +104,25 @@
                             <a class="nav-link" href="promotions.php">Promotions</a>
                         </li>
                         <li>
+                            <!-- post bar only appears for customer -->
+                            <div id="adminSection" style="  width:100px">
+                            <?php if(isset($_COOKIE["user"])) { ?>                                            
+                                    <?php  $post = $userObject -> verifycustomer($_COOKIE["user"]); 
+                                        if( $post) {
+                                    ?>
+                                        <a class="nav-link"  href="myPosts.php">My Posts</a>
+                                        
+                            <?php }} ?>
+                            </div>
+                        </li>
+                        <li>
                             <!-- customer bar only appears for admins -->
                             <div id="adminSection" style="  width:100px">
                             <?php if(isset($_COOKIE["user"])) { ?>                                            
                                     <?php  $post = $userObject -> verifyAdmin($_COOKIE["user"]); 
                                         if( $post) {
                                     ?>
-                                        <a class="nav-link"  href="userList.php">list of Users</a>
+                                        <a class="nav-link"  href="userList.php"  style="color:#69DF0E;">list of Users</a>
                                         
                             <?php }} ?>
                             </div>
@@ -122,7 +134,7 @@
                                 <?php  $post = $userObject -> verifyAdmin($_COOKIE["user"]); 
                                  if( $post) {
                                     ?>                                          
-                                        <a class="nav-link"  href="postlist.php">list of post</a>
+                                        <a class="nav-link"  href="postlist.php" style="color:#69DF0E;" >list of post</a>
                                       
                                    
                             <?php }} ?>

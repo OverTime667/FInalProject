@@ -121,6 +121,21 @@
 
             }
 
+            
+            public function verifycustomer($email){
+                $query = "SELECT * FROM users WHERE email = '$email' AND status = 'customer'";
+
+                $result = $this->con->query($query);
+            if($result->num_rows > 0){
+                           
+                return true;
+            }
+            else{
+               return false;
+            }
+
+            }
+
 
         //Update the values in users db 
         public function updateRecord($email){
