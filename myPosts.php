@@ -104,9 +104,9 @@ include_once 'header.php';
                 
                 </td>
                 <td>
-                <a href="edit.php?editId=<?php echo $post['post_id'] ?>" style="color:green">
+                <a href="modifyPost.php?editId=<?php echo $post['post_id'] ?>" style="color:green">
               <i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
-                <a href="postlist.php?id=<?php echo $post['post_id'] ?>" style="color:red" onclick="confirm('Are you sure want to delete this record')">
+                <a href="myPosts.php?id=<?php echo $post['post_id'] ?>" style="color:red" onclick="confirm('Are you sure want to delete this record')">
                 <i class="fa fa-trash" aria-hidden="true"></i>
                 </a> 
                 </td>
@@ -131,7 +131,7 @@ include_once 'header.php';
                     <?php
                     if(isset($page))
                     {
-                        $result = mysqli_query($conn,"SELECT Count(*) As Total from posts");
+                        $result = mysqli_query($conn,"SELECT Count(*) As Total from posts  WHERE owner = '$owner' ");
                         $rows = mysqli_num_rows($result);
 
                       
@@ -148,7 +148,7 @@ include_once 'header.php';
                         else
                         {
                             $j = $page - 1;
-                            echo "<span><a id='page_a_link' href='postlist.php?page=$j'>< Prev</a></span>";
+                            echo "<span><a id='page_a_link' href='myPosts.php?page=$j'>< Prev</a></span>";
                         }
                         for($i=1; $i <= $totalPages; $i++)
                         {
@@ -168,7 +168,7 @@ include_once 'header.php';
                         else
                         {
                             $j = $page + 1;
-                            echo "<span><a id='page_a_link' href='postlist.php?page=$j'> Next </a></span>";
+                            echo "<span><a id='page_a_link' href='myPosts.php?page=$j'> Next </a></span>";
                         }
                     }
                 ?></td>
