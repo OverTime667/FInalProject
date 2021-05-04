@@ -183,6 +183,38 @@
     
 
     }
+
+
+    public function updateRecord($postData){
+
+       
+        $brand = $this-> con-> real_escape_string($_POST['ubrand']);
+        $price = $this-> con-> real_escape_string($_POST['uprice']);
+        $seats = $this-> con-> real_escape_string($_POST['useats']);
+        $milage = $this-> con-> real_escape_string($_POST['umilage']);
+        $availability = $this-> con ->  real_escape_string($_POST['uvailability']);
+        $date_of_model = $this-> con ->  real_escape_string($_POST['udate']);
+        $image = $this-> con ->  real_escape_string($_POST['uimage']);
+        $id = $this-> con ->  real_escape_string($_POST['uid']);
+        $location = $this-> con ->  real_escape_string($_POST['ulocation']);
+        
+        // Edit customer record
+        if(!empty($id) && !empty($postData)){
+            
+            $query = "UPDATE posts SET brand = '$brand', price = '$price', location='$location', seats= '$seats' , milage='$milage', availability='$availability', date_of_model='$date_of_model', image='$image' WHERE post_id= '$id'";
+            $sql = $this->con->query($query);
+            if($sql==true)
+            {
+              //  header("Location:home.php");
+            }else{
+                echo "Failed to update, try again!";
+            }
+        }
+
+
+    }
+
+    
 }
 
 ?>

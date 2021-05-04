@@ -54,7 +54,7 @@ include_once 'header.php';
                 <th>Date Of Post</th>   
                 <th>Fees</th>   
                 <th>DateSold</th>  
-                <th>Description</th> 
+                <th></th> 
             </tr>
             </thead>
         <?php

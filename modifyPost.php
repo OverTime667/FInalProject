@@ -1,14 +1,19 @@
 <?php
-include 'users.php';
-include_once 'header.php';
+include_once("header.php");
 // Create an object of type customer
 $postObject = new Posts();
+$updateId;
 
-
-
+// Edit customer record
+if(isset($_GET['editId']) && !empty($_GET['editId'])) {
+    $updateId = $_GET['editId'];
+  $post = $postObject->displayUniquePost($updateId);
+}
   // Update Record in post table
-  if(isset($_POST['update'])) {
-    $post ->   $postObject->updateRecord($_POST);
+  if(isset($_POST['updatePost'])) {
+
+  $postObject->updateRecord($_POST);
+ 
   } 
 
 ?>
@@ -26,46 +31,54 @@ $postObject = new Posts();
 </head>
 <body>
     <!--div representing the header of the page --> 
-   
+   <!--div representing the header of the page --> 
+  
 
     <!-- Body of page Starts here -->
     <div id= "profileBody" >
 
     <!--ask the user to register info -->
         <div id="profileDiv" class="center" >          
-            <form action="editProfile.php" method="POST">
+            <form action="" method="POST">
+
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"></label>
+                    <input  type="text" class="form-control" name="uid"  value="<?php echo $post['post_id']; ?>" require="">
+         
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Brand</label>
-                    <input readonly type="email" class="form-control" name="uemail"  value="<?php echo $post['brand']; ?>" require="">
+                    <input  type="text" class="form-control" name="ubrand"  value="<?php echo $post['brand']; ?>" require="">
          
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputUsername" class="form-label">Price</label>
-                    <input type="text" class="form-control" name="uprice"  value="<?php echo $user['username']; ?>" require="">
+                    <input type="text" class="form-control" name="uprice"  value="<?php echo $post['price']; ?>" require="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputUsername" class="form-label">Location</label>
+                    <input type="text" class="form-control" name="ulocation"  value="<?php echo $post['location']; ?>" require="">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPhonenumber" class="form-label" >Seats</label>
-                    <input type="text" class="form-control" name="useats" value="<?php echo $user['phone']; ?>" require="" >
+                    <input type="text" class="form-control" name="useats" value="<?php echo $post['seats']; ?>" require="" >
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword" class="form-label">milage</label>
-                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
+                    <input type="text" class="form-control" name="umilage" value="<?php echo $post['milage']; ?>" require="" >
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword" class="form-label">milage</label>
-                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
-                </div>
+            
                 <div class="mb-3">
                     <label for="exampleInputPassword" class="form-label">availability</label>
-                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
+                    <input type="text" class="form-control" name="uvailability" value="<?php echo $post['availability']; ?>" require="" >
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword" class="form-label">date of model</label>
-                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
+                    <input type="text" class="form-control" name="udate" value="<?php echo $post['date_of_model']; ?>" require="" >
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword" class="form-label">image</label>
-                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
+                    <label for="exampleInputPassword" class="form-label">image url</label>
+                    <input type="text" class="form-control" name="uimage" value="<?php echo $post['image']; ?>" require="" >
                 </div>
       
 
@@ -75,7 +88,7 @@ $postObject = new Posts();
                     <form action="userList.php?editId=<?php echo $user['user_id'] ?>" method="POST"> 
                 </div>
                 
-                <input type="submit" name="update" class="btn btn-primary"  value="Update">
+                <input type="submit" name="updatePost" class="btn btn-primary"  value="Update">
             </form>
         </div>
     </div>

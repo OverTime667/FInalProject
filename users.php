@@ -211,7 +211,7 @@
                     if($sql==true)
                     {
                         echo "User status was updated";
-                        header("Refresh:0");
+                       // header("Refresh:0");
                     }else{
                         echo "Failed to update, try again!";
                     

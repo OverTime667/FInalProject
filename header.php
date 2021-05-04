@@ -145,10 +145,17 @@
                     <?php }else{ ?>
                         <form action="home.php" method="POST">
                         <input type="submit" name="logout"   value="logout" >
-                        </div>                                         
+                    </div>
+                    <div>   
+                    <?php if(isset($_COOKIE["user"])) { ?>                                            
+                                    <?php  $post = $userObject -> verifycustomer($_COOKIE["user"]); 
+                                        if( $post) {
+                                    ?>                        
                     <a href="items.php">
                         <button type="button" class="btn btn-primary" >Create a post</button>
                     </a>
+                    <?php }} ?>
+                    </div>
                     <ul class="navbar-nav">
                         <li class="nav-item ">
                             <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
