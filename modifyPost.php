@@ -1,6 +1,6 @@
 <?php
 include 'users.php';
-
+include_once 'header.php';
 // Create an object of type customer
 $postObject = new Posts();
 
@@ -8,7 +8,7 @@ $postObject = new Posts();
 
   // Update Record in post table
   if(isset($_POST['update'])) {
-    $postObject->updateRecord($_POST);
+    $post ->   $postObject->updateRecord($_POST);
   } 
 
 ?>
@@ -26,10 +26,7 @@ $postObject = new Posts();
 </head>
 <body>
     <!--div representing the header of the page --> 
-    <?php
-
-        include_once("header.php");
-    ?>
+   
 
     <!-- Body of page Starts here -->
     <div id= "profileBody" >
@@ -38,40 +35,44 @@ $postObject = new Posts();
         <div id="profileDiv" class="center" >          
             <form action="editProfile.php" method="POST">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input readonly type="email" class="form-control" name="uemail"  value="<?php echo $user['email']; ?>" require="">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <label for="exampleInputEmail1" class="form-label">Brand</label>
+                    <input readonly type="email" class="form-control" name="uemail"  value="<?php echo $post['brand']; ?>" require="">
+         
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputUsername" class="form-label">Username</label>
-                    <input type="text" class="form-control" name="uusername"  value="<?php echo $user['username']; ?>" require="">
+                    <label for="exampleInputUsername" class="form-label">Price</label>
+                    <input type="text" class="form-control" name="uprice"  value="<?php echo $user['username']; ?>" require="">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPhonenumber" class="form-label" >Phone number</label>
-                    <input type="text" class="form-control" name="uphone" value="<?php echo $user['phone']; ?>" require="" >
+                    <label for="exampleInputPhonenumber" class="form-label" >Seats</label>
+                    <input type="text" class="form-control" name="useats" value="<?php echo $user['phone']; ?>" require="" >
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword" class="form-label">New Password</label>
-                    <input type="text" class="form-control" name="upassword" value="<?php echo $user['password']; ?>" require="" >
+                    <label for="exampleInputPassword" class="form-label">milage</label>
+                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
                 </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword" class="form-label">milage</label>
+                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword" class="form-label">availability</label>
+                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword" class="form-label">date of model</label>
+                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword" class="form-label">image</label>
+                    <input type="text" class="form-control" name="umilage" value="<?php echo $user['password']; ?>" require="" >
+                </div>
+      
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword" class="form-label">Subscription</label>
+           
                             <!-- choose the status of the user-->
                     <form action="userList.php?editId=<?php echo $user['user_id'] ?>" method="POST"> 
-                
-                
-                <select name="subscription" id="subscription">
-                    <option name="main">  <?php echo $user['subscription'] ?> </option>
-                    <option  name="Classic" value="Classic">Classic</option>
-                    <option name ="Premium" value="Premium">Premium</option>
-                    
-                </select>
-                <a href="promotions.php"> need more information? </a>
-                  
-                
-                            
-                
                 </div>
                 
                 <input type="submit" name="update" class="btn btn-primary"  value="Update">
