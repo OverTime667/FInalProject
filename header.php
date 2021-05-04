@@ -48,24 +48,19 @@
 
         <!-- search part of the headerdiv -->
         <div id="searchpart" >
-        <form action="" method="POST">
-        <nav class=" navbar navbar-light bg-light">
-            <div class="container-fluid" style="display:inline-block;">
-                
-                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" style="width:300px" >
-            
-                <button class="btn btn-outline-success" name="searchitem" type="submit" style="display:inline;">Search</button>
-               
-                </form>
-            </div>
+            <form action="" method="POST">
+            <nav class=" navbar navbar-light bg-light">
+                <div class="container-fluid" style="display:inline-block;">
+                    
+                    <input type="search" name="search" placeholder="Search" aria-label="Search" style="width:300px" >   
+                    <button  name="searchitem" type="submit" style="display:inline;">Search</button>                              
+                    
+                </div>
             </nav>
             </form>
         </div>
         
-        <?php   
-        
-        
-        ?>
+
 
         <!-- user information part of headerDiv -->
         <div id="currentUserInfo"> 
