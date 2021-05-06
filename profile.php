@@ -68,11 +68,11 @@ if(isset($_COOKIE["user"])){
     
 
     <!-- end of Page -->
-   <footer class="profilefooter" style="position: absolute;bottom: 0; width: 100%; height: 2.5rem;  ">
+   
     <?php
         include_once("footer.php");
     ?>
-</footer>
+
 
 </body>   
 </html>
