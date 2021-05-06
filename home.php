@@ -47,7 +47,7 @@
                    
                     </br>
                     <a href="promotions.php">
-                        <button type="button" class="btn btn-primary btn-lg" style="margin-top:25%; border: 3px solid grey; "  >See our promotions</button>
+                        <button type="button" class="btn btn-primary btn-lg" style="margin-top:24%; border: 3px solid grey; "  >See our promotions</button>
                     </a>               
                 </div>
             </div>

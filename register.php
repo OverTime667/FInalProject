@@ -35,8 +35,10 @@
     ?>
 
     <!-- Body of page Starts here -->
-    <div id="bodyPage">
-        
+    <div id="bodyPage" style="padding-left: 300px; padding-top: 150px;">
+    <div style="padding-left:150px;">
+        <h1>Register here</h1>
+    </div>
 
         <div id= "containeseverything" >
 

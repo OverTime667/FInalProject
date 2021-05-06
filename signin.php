@@ -41,9 +41,12 @@ if(isset($_POST['signin']))
     ?>
 
     <!-- Body of page Starts here -->
-    <div id="bodyPage">
+    <div id="bodyPage" style="padding-left: 300px; padding-top: 150px;">
             <!-- TEST -->
-        <div id= "containeseverything" >
+        <!-- <div id= "containeseverything" style="border:1px solid black;" > -->
+        <div style=" padding-left:150px;">
+            <h1>Signin here</h1>
+        </div>
 
         <!--ask the user to register info -->
             <div id="Registerdiv"  >          
@@ -80,7 +83,7 @@ if(isset($_POST['signin']))
 
             </div>
 
-        </div>
+        <!-- </div> -->
     </div>
 
     <!-- end of Page -->

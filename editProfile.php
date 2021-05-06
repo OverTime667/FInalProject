@@ -36,7 +36,12 @@ if(isset($_COOKIE["user"])){
     ?>
 
     <!-- Body of page Starts here -->
-    <div id= "profileBody" >
+    <div id= "profileBody" style="height:800px;">
+    <br><br><br><br>
+    <div style="text-align: center;">
+        <h1>Edit Profile</h1>
+    </div>
+    <br>
 
     <!--ask the user to register info -->
         <div id="profileDiv" class="center" >          
@@ -85,10 +90,11 @@ if(isset($_COOKIE["user"])){
     
 
     <!-- end of Page -->
-    <?php
-
-        include_once("footer.php");
-    ?>
+    <footer class="profilefooter" style="position: absolute;bottom: 0; width: 100%; height: 2.5rem;  ">
+        <?php
+            include_once("footer.php");
+        ?>
+    </footer>
 
 </body>   
 </html>

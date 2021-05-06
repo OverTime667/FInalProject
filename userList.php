@@ -45,8 +45,8 @@ include_once 'header.php';
 <body>
     
  
-    <!-- Body of page Starts here -->
-    <div id="bodyPage">
+<!-- Body of page Starts here -->
+<div id="bodyPage">
 <h2>View Records
    
   </h2>

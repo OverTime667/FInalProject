@@ -32,18 +32,18 @@ if(isset($_COOKIE["user"])){
     <?php
 
         include_once("header.php");
-
-    
-
-
     ?>
 
     <!-- Body of page Starts here -->
-    <div id= "profileBody" >
-
+    <div id= "profileBody" style="height:800px;" >
+    <br><br><br><br><br>
+    <div style="text-align: center;">
+        <h1>Profile</h1>
+    </div>
+    <br>
     <!--ask the user to register info -->
         <div id="profileDiv" class="center" >          
-            <form action="profile.php" method="POST">
+            <form action="profile.php" method="POST" >
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input readonly type="email" class="form-control" name="uemail"  aria-describedby="emailHelp" value="<?php echo $user['email']; ?>" require="" >
@@ -68,10 +68,11 @@ if(isset($_COOKIE["user"])){
     
 
     <!-- end of Page -->
+   <footer class="profilefooter" style="position: absolute;bottom: 0; width: 100%; height: 2.5rem;  ">
     <?php
-
         include_once("footer.php");
     ?>
+</footer>
 
 </body>   
 </html>
