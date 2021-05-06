@@ -24,8 +24,9 @@ include_once("header.php");
 
     <!-- Body of page Starts here -->
     <div id="bodyPage" >
-
+    <div style="margin-left:30%" >
     <img src="https://standinggroups.ecpr.eu/sgoc/wp-content/uploads/sites/51/2018/09/Become-a-Member.png"  width="500" height="200"   alt="...">
+    </div>
     <div class="card mb-3">
   <img src="https://miro.medium.com/max/4196/1*uYfVGhAYq6ss6n_wBrRvBw.jpeg" class="card-img-top"  alt="...">
   <div class="card-body">

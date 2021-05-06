@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include_once "header.php";
 // Create an object of type customer
 $postObject = new Posts();
 $updateId;
@@ -13,7 +13,7 @@ if(isset($_GET['editId']) && !empty($_GET['editId'])) {
   if(isset($_POST['updatePost'])) {
 
   $postObject->updateRecord($_POST);
- 
+  $post = $postObject->displayUniquePost($updateId);
   } 
 
 ?>
@@ -23,11 +23,15 @@ if(isset($_GET['editId']) && !empty($_GET['editId'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
+    <title>Edit Post</title>
     <!--implement bootstrapp -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js" type="text/javascript">
+    </script>
+
+    
 </head>
 <body>
     <!--div representing the header of the page --> 
@@ -39,11 +43,12 @@ if(isset($_GET['editId']) && !empty($_GET['editId'])) {
 
     <!--ask the user to register info -->
         <div id="profileDiv" class="center" >          
-            <form action="modifyPost.php?editId=<?php echo $_GET['editId']?>" method="POST">
-
+            
+            <form id="frmupdate" action="<?php echo $_SERVER['PHP_SELF'] . "?editId=" .  $_GET['editId']; ?>" method="POST"  >  
+           
             <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"></label>
-                    <input  type="text" class="form-control" name="uid"  value="<?php echo $post['post_id']; ?>" require="">
+                    <input  type="hidden" class="form-control" name="uid"  value="<?php echo $post['post_id']; ?>" require="">
          
                 </div>
                 <div class="mb-3">
@@ -82,14 +87,27 @@ if(isset($_GET['editId']) && !empty($_GET['editId'])) {
                 </div>
       
 
-                <div class="mb-3">
-           
-                            <!-- choose the status of the user-->
-                    <form action="userList.php?editId=<?php echo $user['user_id'] ?>" method="POST"> 
-                </div>
+               
                 
-                <input type="submit" name="updatePost" class="btn btn-primary"  value="Update">
+                <input type="submit" name="updatePost" class="btn btn-primary"  value="Update" >
             </form>
+           <!--  <script >
+
+
+               // const refresh = () => setTimeout(function(){window.location.replace("http://localhost/finalproject/myPosts.php");},15000);
+                window.onload = (event) => 
+                {
+                  //  document.getElementById("frmupdate").onsubmit = refresh();
+                        
+                    
+                };
+           
+
+            </script> -->
+            <div id="trialdiv" class="mb-3" >
+
+                        
+            </div>
         </div>
     </div>
     

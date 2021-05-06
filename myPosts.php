@@ -42,8 +42,7 @@ include_once 'header.php';
     <thead>
             <tr>
                 <th> </th>
-                <th>Id</th>      
-                <th>Owner</th>                    
+                                 
                 <th>Brand</th>
                 <th>Price</th>
                 <th>Location</th>
@@ -52,9 +51,9 @@ include_once 'header.php';
                 <th>Availability</th>
                 <th>Date Of Model</th>          
                 <th>Date Of Post</th>   
-                <th>Fees</th>   
+              
                 <th>DateSold</th>  
-                <th></th> 
+                <th>Description</th> 
             </tr>
             </thead>
         <?php
@@ -86,8 +85,8 @@ include_once 'header.php';
               
                 </td> 
                
-                <td><?php echo $post['post_id'] ?></td>
-                <td><?php echo $post['owner'] ?></td>
+               
+                
                 <td><?php echo $post['brand'] ?></td>
                 <td><?php echo $post['price'] ."$"?></td>
                 <td><?php echo $post['location'] ?></td>
