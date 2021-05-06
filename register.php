@@ -35,7 +35,7 @@
     ?>
 
     <!-- Body of page Starts here -->
-    <div id="bodyPage" style="padding-left: 300px; padding-top: 150px;">
+    <div id="bodyPage" style="padding-left: 300px; padding-top: 80px;">
     <div style="padding-left:150px;">
         <h1>Register here</h1>
     </div>
