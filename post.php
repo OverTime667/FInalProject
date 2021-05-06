@@ -205,7 +205,7 @@
             $sql = $this->con->query($query);
             if($sql==true)
             {
-              //  header("Location:home.php");
+                header("Location: myPosts.php");
             }else{
                 echo "Failed to update, try again!";
             }

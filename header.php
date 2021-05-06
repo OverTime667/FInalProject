@@ -41,9 +41,13 @@
     <!--div representing the header of the page --> 
     <div id="headerDiv" style="background-color:white;">
         <!-- logo part of headerDiv -->
-        <div id="logo">
+        <div id="logo" style="">
+        <div style="display: inline-block;">
             <h2 ><b>FIND YOUR CAR</b></h2>
-           
+         </div>
+         <div style="display: inline-block; margin-left: 10px" >   
+            <img src="./img/carlogoimg.jpg" height=70 width=80 alt="..."  >
+           </div> 
         </div>
 
         <!-- search part of the headerdiv -->

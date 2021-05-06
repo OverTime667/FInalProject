@@ -1,5 +1,5 @@
 <?php
-include_once("header.php");
+include "header.php";
 // Create an object of type customer
 $postObject = new Posts();
 $updateId;
@@ -39,7 +39,7 @@ if(isset($_GET['editId']) && !empty($_GET['editId'])) {
 
     <!--ask the user to register info -->
         <div id="profileDiv" class="center" >          
-            <form action="" method="POST">
+            <form action="modifyPost.php?editId=<?php echo $_GET['editId']?>" method="POST">
 
             <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"></label>
