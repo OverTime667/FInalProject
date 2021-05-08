@@ -42,6 +42,15 @@
             <input  type="text" class="form-control" name="message"  value="<?php echo $message  ?>" require="">
 
             <input type="submit" name="update" class="btn btn-primary"  style="float:right;" value="create Message">
+            <br><br>
+
+            <div>
+            <form action="createMsg.php" method="POST"> 
+            <label for="exampleInputEmail1" class="form-label">Change post price </label>
+            <input  type="text" class="form-control" name="message"  value="" require="">
+
+            <input type="submit" name="update" class="btn btn-primary"  style="float:right;" value="change">
+            </div>
         </div>
     <!-- end of Page -->
    

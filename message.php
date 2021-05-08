@@ -52,7 +52,7 @@
              // Edit customer record
             
              $message = $this-> con-> real_escape_string($_POST['message']);
-                $query = "UPDATE messages SET message = '$message' WHERE message_id = 1";
+                $query = "UPDATE configure SET message = '$message' WHERE message_id = 1";
                 $sql = $this->con->query($query);
                 if($sql==true)
                 {
@@ -64,7 +64,7 @@
         
         
         public function showMsg(){
-            $query = "SELECT message AS msg FROM messages where message_id = 1";
+            $query = "SELECT message AS msg FROM configure where message_id = 1";
             $result = $this->con->query($query);
             $row = $result->fetch_assoc();
              return $row['msg'];
