@@ -74,8 +74,14 @@ if(isset($_GET['editId']) && !empty($_GET['editId'])) {
                 </div>
             
                 <div class="mb-3">
+
+                <!-- slect if the customer has sold and it is avaialable or if it isn't-->
                     <label for="exampleInputPassword" class="form-label">availability</label>
-                    <input type="text" class="form-control" name="uvailability" value="<?php echo $post['availability']; ?>" require="" >
+                    <select name="availability" id="availability">
+                <option name="main"> <?php echo $post['availability']; ?> </option>
+                <option  name="Available" value="Available">Available</option>
+                <option name ="Unavailable" value="Unavailable">Unavailable</option>
+            </select>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword" class="form-label">date of model</label>

@@ -91,7 +91,13 @@ include_once 'header.php';
                 <td><?php echo $post['location'] ?></td>
                 <td><?php echo $post['milage'] ?></td>
                 <td><?php echo $post['seats'] ?></td>
-                <td><?php echo $post['availability'] ?></td>
+
+                <td>
+                <!-- the admin will be allow to modify the availability of a post -->
+                <div>
+                <?php echo $post['availability'] ?>
+                
+                </div></td>
                 <td><?php echo $post['date_of_model'] ?>
                 <td><?php echo $post['date_of_post'] ?></td>
                 <td><?php echo $post['fees'] . "$"?></td>

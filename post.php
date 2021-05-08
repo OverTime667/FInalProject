@@ -194,16 +194,28 @@
         $price = $this-> con-> real_escape_string($_POST['uprice']);
         $seats = $this-> con-> real_escape_string($_POST['useats']);
         $milage = $this-> con-> real_escape_string($_POST['umilage']);
-        $availability = $this-> con ->  real_escape_string($_POST['uvailability']);
+        $availability = $this-> con ->  real_escape_string($_POST['availability']);
         $date_of_model = $this-> con ->  real_escape_string($_POST['udate']);
         $image = $this-> con ->  real_escape_string($_POST['uimage']);
         $id = $this-> con ->  real_escape_string($_POST['uid']);
         $location = $this-> con ->  real_escape_string($_POST['ulocation']);
         
+
+        switch($availability){
+            case 'Available':
+                $newavailability = "Available";
+            break;
+            case 'Unavailable':
+                $newavailability = "Unavailable";
+                break;
+        }
+
+
+
         // Edit customer record
         if(!empty($id) && !empty($postData)){
             
-            $query = "UPDATE posts SET brand = '$brand', price = '$price', location='$location', seats= '$seats' , milage='$milage', availability='$availability', date_of_model='$date_of_model', image='$image' WHERE post_id= '$id'";
+            $query = "UPDATE posts SET brand = '$brand', price = '$price', location='$location', seats= '$seats' , milage='$milage', availability='$newavailability', date_of_model='$date_of_model', image='$image' WHERE post_id= '$id'";
             $sql = $this->con->query($query);
             if($sql==true)
             {
