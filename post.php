@@ -32,7 +32,7 @@
             $location = $this-> con-> real_escape_string($_POST['location']);
             $milage = $this-> con-> real_escape_string($_POST['milage']);
             $seats = $this-> con-> real_escape_string($_POST['seats']);
-            $availability = $this-> con-> real_escape_string($_POST['availability']);
+            $availability = "Available";
            
            
             $dateofpost = date('d-m-y h:i:s');
