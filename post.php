@@ -168,10 +168,12 @@
 
     
 
-    public function searchItem($searchItem){
+ /*    public function searchItem($searchItem){
         
-        $query = "SELECT * FROM posts WHERE brand OR price OR location LIKE '%$searchItem%'"; 
+      //  $query = "SELECT * FROM posts WHERE brand LIKE '%$searchItem%' OR  location LIKE '%$searchItem%' OR price <=  CONVERT(INT, '$searchItem') "; 
 
+      $query = "SELECT * FROM posts WHERE  price <= $searchItem "; 
+      //CONVERT(INT, '$searchItem') "; 
         $sql = $this->con->query($query);
         if($result->num_rows > 0){
             $data = array();
@@ -182,7 +184,7 @@
         }
     
 
-    }
+    } */
 
 
     public function updateRecord($postData){

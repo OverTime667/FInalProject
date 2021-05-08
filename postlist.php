@@ -116,7 +116,7 @@ include_once 'header.php';
                 </tbody>
     </table>
 
-    <h2>Total profit: <?php echo $total ?></h2>
+    <h2>Total profit: <?php echo $total . "$"?></h2>
 
 
     <!-- this section is for the paging -->

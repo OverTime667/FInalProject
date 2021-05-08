@@ -38,7 +38,7 @@ include_once 'header.php';
             </tr>
                     </thead>
                 <?php
-                $perpage = 3;
+                $perpage = 20;
                 $conn = new mysqli("localhost", "root", "" ,"finalproject" );
                 
                 // get the page number in url else page is equal to page 1
@@ -51,7 +51,7 @@ include_once 'header.php';
 
                 $calc = $perpage * $page;
                 $start = $calc - $perpage;
-                $query = "SELECT * FROM posts WHERE  Location LIKE '%$search%' OR brand  LIKE '%$search%' OR seats LIKE '$search' Limit $start, $perpage";
+                $query = "SELECT * FROM posts WHERE  Location LIKE '%$search%' OR brand  LIKE '%$search%' OR seats LIKE '$search' OR price <= '$search' ORDER BY price DESC Limit $start, $perpage";
                 $result = $conn->query($query);
                 $rows = mysqli_num_rows($result);
                 if($rows){

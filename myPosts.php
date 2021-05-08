@@ -153,7 +153,7 @@ include_once 'header.php';
                         {
                             if($i<>$page)
                             {
-                                echo "<span><a id='page_a_link' href='postlist.php?page=$i'> $i </a></span>";
+                                echo "<span><a id='page_a_link' href='myPosts.php?page=$i'> $i </a></span>";
                             }
                             else
                             {
