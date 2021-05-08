@@ -140,6 +140,19 @@
                             </div>
 
                         </li>
+                        <li>
+                            <!-- Post bar only appears for admins -->
+                            <div id="adminSection" style="   width:100px ">
+                            <?php if(isset($_COOKIE["user"])) { ?>  
+                                <?php  $post = $userObject -> verifyAdmin($_COOKIE["user"]); 
+                                 if( $post) {
+                                    ?>                                          
+                                        <a class="nav-link"  href="createMsg.php" style="color:#69DF0E;" >Messages</a>                                
+                                   
+                            <?php }} ?>
+                            </div>
+
+                        </li>
                     </ul>
                             <!-- use php to disable and renable the singin and login for user  -->       
                     <div id="registerAndProfile" > 
