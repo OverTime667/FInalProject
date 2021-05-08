@@ -47,7 +47,7 @@ include_once 'header.php';
 
         $calc = $perpage * $page;
         $start = $calc - $perpage;
-        $query = "SELECT * FROM posts Limit $start, $perpage";
+        $query = "SELECT * FROM posts WHERE availability = 'Available' Limit $start, $perpage";
         $result = $conn->query($query);
          $rows = mysqli_num_rows($result);
         if($rows){

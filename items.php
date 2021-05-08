@@ -57,10 +57,10 @@
           <label for="exampleInputseats" class="form-label">Seats</label>
            <input type="text" class="form-control" name="seats" placeholder="Enter the number of seats" require="">
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label for="exampleInputAvailability" class="form-label">Availability</label
           > <input type="text" class="form-control" name="availability" placeholder="Enter availability" require="">
-        </div>
+        </div> -->
         <div class="mb-3">
           <label for="exampleInputDateOfModel" class="form-label">Date of Model</label> 
           <input type="text" class="form-control" name="trial" placeholder="Enter the model's date" require="">
