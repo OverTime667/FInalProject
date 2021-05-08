@@ -61,6 +61,21 @@
                     echo "Failed to update, try again!";
                 }
             }
+
+            public function updatefees(){
+
+                // Edit customer record
+               
+                $fees = $this-> con-> real_escape_string($_POST['fee']);
+                   $query = "UPDATE configure SET fees = '$fees' WHERE message_id = 1";
+                   $sql = $this->con->query($query);
+                   if($sql==true)
+                   {
+                    
+                   }else{
+                       echo "Failed to update, try again!";
+                   }
+               }
         
         
         public function showMsg(){
@@ -68,6 +83,14 @@
             $result = $this->con->query($query);
             $row = $result->fetch_assoc();
              return $row['msg'];
+
+        }
+
+        public function showfees(){
+            $query = "SELECT fees AS fee FROM configure where message_id = 1";
+            $result = $this->con->query($query);
+            $row = $result->fetch_assoc();
+             return $row['fee'];
 
         }
     }

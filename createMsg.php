@@ -5,12 +5,19 @@
     $msgObject = new Message();
 
     
- // Update Record in customer table
+
  if(isset($_POST['update'])) {
     $msgObject->updateMsg();
     $message = $msgObject -> showMsg();
   } 
+
+  if(isset($_POST['fees'])) {
+    $msgObject->updatefees();
+    $fee = $msgObject -> showfees();
+  } 
+
   $message = $msgObject -> showMsg();
+  $fee = $msgObject -> showfees();
 
 ?>
 
@@ -47,9 +54,9 @@
             <div>
             <form action="createMsg.php" method="POST"> 
             <label for="exampleInputEmail1" class="form-label">Change post price </label>
-            <input  type="text" class="form-control" name="message"  value="" require="">
+            <input  type="text" class="form-control" name="fee"  value="<?php echo $fee  ?>" require="">
 
-            <input type="submit" name="update" class="btn btn-primary"  style="float:right;" value="change">
+            <input type="submit" name="fees" class="btn btn-primary"  style="float:right;" value="change">
             </div>
         </div>
     <!-- end of Page -->

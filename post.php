@@ -1,5 +1,5 @@
 <?php 
-
+    include_once 'message.php';
 
 
     class Posts{
@@ -36,7 +36,12 @@
            
            
             $dateofpost = date('d-m-y h:i:s');
-            $fees =  5 ;
+
+            //obtain the fees from configure table
+            $msgObject = new Message();
+            $fee = $msgObject -> showfees();
+          
+         
             $datesold =  $this-> con-> real_escape_string("");
             $image = $this-> con-> real_escape_string($_POST['image']);
             $other = $this-> con-> real_escape_string($_POST['other']);
@@ -47,7 +52,7 @@
             $userObject = new Users();
 
             if($userObject -> verifySub($owner) == true){
-               $fees = 5;
+               $fees = $fee;
             }else{
             
              $fees = 0;
