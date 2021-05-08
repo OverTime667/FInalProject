@@ -10,6 +10,9 @@ CREATE TABLE messages (
 ); 
 
 
+INSERT INTO messages (message_id, message, owner, reg_date) VALUES
+(1, 'something', 'admin', '2021-04-12 18:03:42');
+
     ALTER TABLE messages
     ADD PRIMARY KEY (message_id);
 

@@ -1,3 +1,17 @@
+<?php
+
+    include_once 'message.php';
+
+    $msgObject = new Message();
+ // Update Record in customer table
+ if(isset($_POST['update'])) {
+    $msgObject->updateRecord($_POST);
+  } 
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +34,11 @@
        <!-- Body of page Starts here -->
        <div id="bodyPage">
 
-
+       <form action="createMsg.php>" method="POST"> 
             <label for="exampleInputEmail1" class="form-label">Enter Message </label>
-            <input  type="text" class="form-control" name="uid"  value="" require="">
+            <input  type="text" class="form-control" name="message"  value="" require="">
 
-            <input type="submit" name="update" class="btn btn-primary"  style="float:right;" value="Update">
+            <input type="submit" name="update" class="btn btn-primary"  style="float:right;" value="create Message">
         </div>
     <!-- end of Page -->
    
