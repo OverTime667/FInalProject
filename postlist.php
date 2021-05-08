@@ -11,7 +11,26 @@ include_once 'header.php';
     }
 
     
-
+    // update the availability of the ppst
+    if(isset($_POST['availability']))
+    {
+    $status = $_POST['availability'];
+    
+    $id = $_GET['editId'];
+    // echo $id;
+    switch($status){
+        case 'Available':
+        
+        $postObject -> updatepost($id,$status);
+        break;
+        case 'Unavailable':
+            $postObject -> updatepost($id,$status);
+            break;
+            
+        // $userObject->updateUser($_POST);
+    }
+ }
+    
      $total = $postObject -> totalProfits();
 
 ?>
@@ -95,8 +114,15 @@ include_once 'header.php';
                 <td>
                 <!-- the admin will be allow to modify the availability of a post -->
                 <div>
-                <?php echo $post['availability'] ?>
+                <form action="postlist.php?editId=<?php echo $post['post_id'] ?>" method="POST"> 
                 
+                    <select name="availability" id="availability">
+                        <option name="main"> <?php echo $post['availability']; ?> </option>
+                        <option  name="Available" value="Available">Available</option>
+                        <option name ="Unavailable" value="Unavailable">Unavailable</option>
+                    </select>
+                    <input type="submit" name="update" class="btn btn-primary"  style="float:right;" value="Update">
+                    </form>
                 </div></td>
                 <td><?php echo $post['date_of_model'] ?>
                 <td><?php echo $post['date_of_post'] ?></td>

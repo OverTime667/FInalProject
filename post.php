@@ -225,10 +225,30 @@
             }else{
                 echo "Failed to update, try again!";
             }
+     
         }
-
-
     }
+
+        
+            
+        public function updatepost($id,$availability){             
+                
+               
+            $query = "UPDATE posts SET availability = '$availability' WHERE post_id = '$id'";
+            $sql = $this->con->query($query);
+            if($sql==true)
+            {
+                echo "Post was updated";
+               // header("Refresh:0");
+            }else{
+                echo "Failed to update, try again!";
+            
+        }
+    }
+
+
+
+    
 
     
 }
