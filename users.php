@@ -203,6 +203,23 @@
             }
 
             
+            public function deleteUser($user){
+
+
+                $query = "DELETE FROM users WHERE email = '$user' AND status != 'admin'";
+        $sql = $this->con->query($query);
+        if($sql==true){
+            setcookie("user", "");
+            header("Location:home.php");
+          
+        }
+        else{
+            echo "Not possible to delete, please try again!";
+        }
+            }
+            
+
+            
             public function updateUser($id,$status){             
                 
                

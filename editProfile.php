@@ -14,6 +14,11 @@ if(isset($_COOKIE["user"])){
   if(isset($_POST['update'])) {
     $usersObject->updateRecord($_POST);
   } 
+    // Update Record in customer table
+    if(isset($_POST['delete'])) {
+        $editemail =  $_COOKIE["user"];
+        $usersObject->deleteUser($editemail);
+      } 
 
 ?>
 <!DOCTYPE html>
@@ -84,6 +89,7 @@ if(isset($_COOKIE["user"])){
                 </div>
                 
                 <input type="submit" name="update" class="btn btn-primary"  value="Update">
+                <input type="submit" name="delete"class="btn btn-danger"  value="Delete account">
             </form>
         </div>
     </div>
