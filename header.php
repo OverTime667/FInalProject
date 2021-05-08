@@ -147,7 +147,7 @@
                                 <?php  $post = $userObject -> verifyAdmin($_COOKIE["user"]); 
                                  if( $post) {
                                     ?>                                          
-                                        <a class="nav-link"  href="createMsg.php" style="color:#69DF0E;" >Messages</a>                                
+                                        <a class="nav-link"  href="createMsg.php" style="color:#69DF0E;" >Configurations</a>                                
                                    
                             <?php }} ?>
                             </div>
