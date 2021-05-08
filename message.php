@@ -24,7 +24,7 @@
 
         //Create Insert function
 
-        public function insertmsg($post){
+        /* public function insertmsg($post){
 
             //Fetch the data 
 
@@ -45,9 +45,9 @@
             else{
                 echo "Messagge failed, please try again!";
             }
-        }
+        } */
         
-        public function updateRecord(){
+        public function updateMsg(){
 
              // Edit customer record
             
@@ -56,13 +56,21 @@
                 $sql = $this->con->query($query);
                 if($sql==true)
                 {
-                    header("Location:profile.php");
+                 
                 }else{
                     echo "Failed to update, try again!";
                 }
             }
-        }
+        
+        
+        public function showMsg(){
+            $query = "SELECT message AS msg FROM messages where message_id = 1";
+            $result = $this->con->query($query);
+            $row = $result->fetch_assoc();
+             return $row['msg'];
 
+        }
+    }
 
 
         ?>
